@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 3 - Advanced Attributes and Spatial Queries for Data Exploration
-### Objective – Understanding Attribute Queries and Spatial Queries
+# Lab 3 - Advanced Attributes and Spatial Queries for Data Exploration
+## Objective – Understanding Attribute Queries and Spatial Queries
 
 Document Version: 4/8/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 In this lab students will explore data and decipher the data fields using a data dictionary table. The students will then perform queries on Census data using QGIS Desktop. The students will also create a buffer and learn the importance of buffering in combination with spatial queries.
 
@@ -29,11 +28,11 @@ This lab includes the following tasks:
 + Task 1 – Using Data Dictionaries and Attribute Selections
 + Task 2 – Buffering and Spatial Queries
 
-### 2 Objective: Understanding Attribute Queries and Spatial Queries
+## 2 Objective: Understanding Attribute Queries and Spatial Queries
 
 The objective of this exercise is to learn how to query attribute data and how to derive information from attribute data. You will learn how to perform both attribute queries and spatial queries.
 
-### Task 1 - Using Data Dictionaries and Attribute Selections
+## Task 1 - Using Data Dictionaries and Attribute Selections
 	
 Data dictionaries (a.k.a., look-up tables) are usually in an electronic format. They are often included with datasets so that we can understand the type of data stored in a given field. They become necessary because with some geospatial data formats (shapefile, for example) attribute column names can be restricted to a small number of characters. For example, column names in a shapefile are limited to 10 characters. Therefore, data creators often resort to using codes as field names. Often the only way to know what type of data is stored in a given field is to review the data dictionary (example shown figure below).  
 
@@ -41,7 +40,7 @@ In this task, we will look at the data dictionary given to us with some census d
 
 ![Attribute Table and Data Dictionary](figures/Attribute_Table_and_Data_Dictionary.png "Attribute Table and Data Dictionary")
 
-#### Task 1.1 - Using a Data Dictionary
+### Task 1.1 - Using a Data Dictionary
 
 1. Open QGIS Desktop.
 2. Click on the Browser tab. If the Browser tab is not enabled from the menu bar choose View | Panels | Browser.
@@ -83,7 +82,7 @@ The data dictionary table has two columns: Item and Stub. Item contains the fiel
 
 14. Save your map. You will be using this QGIS Desktop project in task 1.2
 
-#### Task 1.2 - Attribute Selections
+### Task 1.2 - Attribute Selections
 
 Using the map you have just created in Task 1.1, you will now perform some queries against the census data.
 
@@ -124,10 +123,10 @@ Using the map you have just created in Task 1.1, you will now perform some queri
 
 ![States With a Total Population Greater than 10,000,000 Selected](figures/States_with_a_Total_Population_Greater_than_10,000,000_Selected.png "States With a Total Population Greater than 10,000,000 Selected")
 
-### Task 2 - Buffering and Spatial Queries
+## Task 2 - Buffering and Spatial Queries
 Buffering is a key vector analysis tool in GIS. It gives us the ability to create a new GIS layer representing a buffer distance from some map feature(s).
 
-#### Task 2.1 - Running the Buffer Tool
+### Task 2.1 - Running the Buffer Tool
 
 1. Open QGIS Desktop and open Lab 3 Data/Tornado/Tornado.qgs.
 2. The redline represents a tornados path through a residential area. The approximate area of damage was 900 meters around the path. The green polygons represent schools in the area, the parcels are in yellow and the roads black lines.
@@ -152,7 +151,7 @@ Looking at the result we can immediately see the areas affected by the tornado.
 
 7. Save the QGIS project.
 
-#### Task 2.2 Performing Spatial Queries
+### Task 2.2 Performing Spatial Queries
 In this task, you will learn how to identify exactly which parcels were affected by the tornado.
 
 1. Begin with the QGIS Desktop map as you saved it at the conclusion of the previous task.
@@ -182,15 +181,15 @@ The results are shown in the figure below. Now you know the total value of the a
 
 ![Statistics on the Total Value of the Affected Parcels](figures/Statistics_on_the_Total_Value_of_the_Affected_Parcels.png "Statistics on the Total Value of the Affected Parcels")
 
-### 3 Conclusion
+## 3 Conclusion
 In this lab, you explored the use of data dictionaries with coded field names. You experienced another example of using attribute table queries. You used a buffer operation combined with the select by location operation and basic statistics tools to determine to total value of parcels impacted by a tornado. 
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. Why do we need data dictionaries?
 2. How are Attribute selections useful in a GIS?
 3. Why are buffering and spatial selections important to us?
 
-### 5 Challenge Assignment (optional)
+## 5 Challenge Assignment (optional)
 
 Repeat the steps in the second task to determine the roads that were impacted by the tornado. Report the affected road names to your instructor. Make a map composition of both the impacted roads and parcels. Turn in the final map to your instructor.

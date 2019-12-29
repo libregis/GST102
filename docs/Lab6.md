@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 6 - Vector Data Analysis - Network Analysis
-### Objective – Learn the Basics of Network Analysis
+# Lab 6 - Vector Data Analysis - Network Analysis
+## Objective – Learn the Basics of Network Analysis
 
 Document Version: 4/6/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 In this lab, you will learn how to conduct analyses related to linear networks. You will learn how to determine the shortest path from origin to destination and how to allocate a linear network into service areas.
 
@@ -29,11 +28,11 @@ This lab includes the following tasks:
 + Task 1 Basic Network Analysis
 + Task 2 Allocating Service Areas
 
-### 2 Objective: Learn the Basics of Network Analysis
+## 2 Objective: Learn the Basics of Network Analysis
 
 The objective of this lab is for the student to learn how to conduct basic network analysis. You will use the Road Graph plugin to QGIS Desktop, and you will be introduced to the GRASS plugin. You will use some of the networking tools in GRASS to allocate service areas.
 
-### Task 1 Basic Network Analysis
+## Task 1 Basic Network Analysis
 
 In this task, you will use the Road Graph plugin to determine the shortest distance between two points via a San Francisco streets layer. You will do this both by shortest overall distance and by time traveled.
 
@@ -109,7 +108,7 @@ Your map should resemble the figure below.You can now distinguish the major arte
 
 19. Save your map file and close QGIS Desktop.
 
-### Task 2 Allocating Service Areas
+## Task 2 Allocating Service Areas
 
 Now you will use some GRASS tools to allocate portions of the road network served by each San Francisco Police Station. GRASS is a mature and powerful free and open source (FOSS) GIS software package. It has a unique data structure that can be initially intimidating. Fortunately, QGIS Desktop has a GRASS plugin that provides a much more intuitive interface to the large suite of GRASS analysis tools. 
 
@@ -262,16 +261,16 @@ Now that the network dataset is constructed, you will identify the road territor
 
 ![Road Allocation by Police Station](figures/Road_Allocation_by_Police_Station.png "Road Allocation by Police Station")
 
-### 3 Conclusion
+## 3 Conclusion
 
 In this lab, you were exposed to basic network routing and allocation analysis. You calculated the shortest distance between two points via both time and distance. You then determined which portions of the network that should be allocated to each police station. There are many applications for this type of analysis including emergency management, parcel delivery, and general navigation. 
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. What is a real world application of network analysis? Explain.
 2. How can a network analysis benefit the logistics industry?
 3. What other linear networks could this apply to other than roads?
 
-### 5 Challenge Assignment (optional)
+## 5 Challenge Assignment (optional)
 
 The San Francisco Police Department has shown your analysis to their colleagues at the Fire Department and they were impressed. Now the Fire Department would like the same analysis done for their stations. In the PERMANENT mapset there is a SF_FireStations GRASS vector layer. Repeat the steps in the second task to create the same allocation analysis for the Fire Department. Compose a map of the results of the Fire Department analysis.

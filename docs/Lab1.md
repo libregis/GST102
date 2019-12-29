@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 1 - Reviewing the Basics of Geospatial Data
-### Objective – Explore data structures, file types, coordinate systems and attributes
+# Lab 1 - Reviewing the Basics of Geospatial Data
+## Objective – Explore data structures, file types, coordinate systems and attributes
 
 Document Version: 4/2/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 This exercise features questions and activities designed to review some basic GIS and geospatial concepts. Throughout the lab, questions will be asked for you to answer. Create a new document to write your answers and refer back using the question number.
 
@@ -32,7 +31,7 @@ This lab includes the following tasks:
 + Task 4 – Coordinate Systems
 + Task 5 – GIS Data Attributes and Attribute Tables
 
-###2 Objective: Use Basic Spatial Analysis Techniques to Solve a Problem
+##2 Objective: Use Basic Spatial Analysis Techniques to Solve a Problem
 
 Spatial Analysis is a crucial aspect of GIS; the tools allow the user to analyze the patterns and relationships of the various data. Understanding the concepts of data structures, the variety of file formats, coordinates systems, and attributes are necessary in the design and the function of spatial analysis.
 
@@ -57,7 +56,7 @@ Spatial Analysis is a crucial aspect of GIS; the tools allow the user to analyze
 + ERDAS Imagine (.img) – a GIS file format for raster data
 + Geodatabase (.gdb/.mdb/.sqlite) – a relational database capable of storing GIS data layers.
 
-### Task 1 - GIS Data – Vector
+## Task 1 - GIS Data – Vector
 Examine the vector lab exercise data using QGIS Browser.
 
 2. Open QGIS Browser.
@@ -89,7 +88,7 @@ Examine the vector lab exercise data using QGIS Browser.
 	* Geometry:
 	* Number of Features:
 
-###Task 2 - GIS Data - Raster
+##Task 2 - GIS Data - Raster
 
 Examine the raster datasets provided with this lab.
 
@@ -110,7 +109,7 @@ Examine the raster datasets provided with this lab.
 
 **Question # 3: Do these look to be discrete or continuous raster datasets?**
 
-### Task 3 - Geodatabase
+## Task 3 - Geodatabase
 
 This task will introduce you to another file format, the geodatabase. You will use QGIS Desktop to connect to, and explore the data contained in a SpatiaLite database. SpatiaLite is a SQLite database engine with spatial functions added. This means that spatial data layers can be stored in the relational database.
 
@@ -161,7 +160,7 @@ This task will introduce you to another file format, the geodatabase. You will u
 **Question # 4:**
 What is a reason to import source data into a geodatabase?
 
-### Task 4 - Coordinate Systems
+## Task 4 - Coordinate Systems
 
 Explore the coordinate reference systems of the lab data. 
 
@@ -190,7 +189,7 @@ Let us say for purposes of our analysis that we would like to change the coordin
 
 ![Save vector layer as...](figures/Save_vector_layer_as.png "Save vector layer as...")
 
-### Task 5 - GIS Data Attributes and Attribute Tables###
+## Task 5 - GIS Data Attributes and Attribute Tables##
 
 1. Open QGIS Desktop and start a new, empty project.
 2. Add State_of_Texas.shp and TxDOT_ARPRT_SMALL.shp to the map canvas.
@@ -208,10 +207,10 @@ Let us say for purposes of our analysis that we would like to change the coordin
 
 **Question #11: If you wanted to identify all Regional airports from the TxDOT_ARPRT_SMALL shapefile on the map how would you do that?**
 
-### 3 Conclusion
+## 3 Conclusion
 In this lab, you were able to identify the data models, geometry, and number of features for several lab data sets. You connected to a SpatiaLite geodatabase and imported a shapefile into it. You identified the coordinate reference systems of data and reprojected a dataset. Finally, you reviewed working with attribute tables. Knowing how to determine the characteristics of datasets is a necessary step in spatial analysis.
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. What is the importance of coordinate reference systems? Why are there so many different coordinate systems and map projections?
 2. Describe the pros and cons of rasters and vectors.

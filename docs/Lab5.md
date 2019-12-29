@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 5 - Vector Data Analysis - Creating a Site Selection Model
-### Objective – Using the QGIS Desktop Graphical Modeler to Perform a Site Selection Analysis
+# Lab 5 - Vector Data Analysis - Creating a Site Selection Model
+## Objective – Using the QGIS Desktop Graphical Modeler to Perform a Site Selection Analysis
 
 Document Version: 4/19/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1 Introduction
+## 1 Introduction
 
 In this lab you will learn how to streamline a workflow with a model. Using the QGIS Desktop Graphical Modeler, you will string tools together using the output of one operation as the input to the next. You can later edit model parameters and share it with others.
 
@@ -31,11 +30,11 @@ This lab includes the following tasks:
 + Task 3 Creating the Model - Part 2
 + Task 4 Creating the Model - Part 3
 
-### 2 Objective: Understanding Basic Vector Analysis Using Overlays
+## 2 Objective: Understanding Basic Vector Analysis Using Overlays
 
 The objective of this lab is for the student to learn how to conduct a site selection analysis using the QGIS Desktop Graphical Modeler.
 
-### Task 1 - Exploring the Data
+## Task 1 - Exploring the Data
 
 1. Open QGIS Desktop.
 2. Add these five shapefiles from the lab directory to a new, blank, QGIS project:
@@ -91,7 +90,7 @@ Must be within a mile of a County road.
 
 9. Save your project as Lab 5.qgs in the lab data directory.
 
-### Task 2 - Creating the Model - Part 1
+## Task 2 - Creating the Model - Part 1
 Now you understand the data you have to work with. You also know that you will have to determine which airports meet the criteria laid out in the completed table above. The next task is to begin building the model.
 
 1. Open QGIS Desktop and open Lab 5.qgs if it is not already.
@@ -192,7 +191,7 @@ Your model is obviously not yet complete. However, it is already a geoprocessing
 17. Click Run. The temporary NuecesCounty layer will be added to QGIS Desktop. Zoom in and verify that Nueces county was correctly selected using the tooo.
 15. For now, remove this layer from QGIS Desktop and then save your QGIS project.
 
-### Task 3 - Creating the Model - Part 2
+## Task 3 - Creating the Model - Part 2
 
 Now that your basic model is set up, you will add additional functionality to it. In this task you will work on geoprocessing the data for the CityBoundaries, Roads, and Water_features layers. You will also clip the airports to Nueces County.
 
@@ -379,7 +378,7 @@ Your model should now resemble the figure below.
 
 20. Save the model.
 
-### Task 4 - Creating the Model - Part 3
+## Task 4 - Creating the Model - Part 3
 
 In this final task, you will combine all the individual parameters into one layer representing the combination of all parameters. This will represent the acceptable area for helipad locations. Then you will run a clip algorithm on airports to determine which airports meet all the criteria.
  
@@ -436,7 +435,7 @@ If the model ran correctly, the FinalSolution layer should contain Cuddihy Field
 
 *Note on Debugging Models*: Here we have written out the vast majority of outputs to temporary files. If you get an error or an incorrect result, it can be helpful to save out questionable intermediate datasets. For example, say you are getting an error or an unexpected result from a buffer operation. Try outputting the result of the Extract by attribute dataset that feeds into the buffer algorithm. This will let you determine if the prior step is working correctly. To do this all you have to do is enter a name for the output in question like you did for Nueces County and the Final Solution.
 
-### 3 Conclusion
+## 3 Conclusion
 In this lab you have been exposed to both site selection modeling and the use of Graphical Modeler in building a workflow. Building the model is certainly time consuming. However, the benefits are many, especially if this is a workflow you will have to perform many times. 
 
 By clicking on the Export as image button 
@@ -446,11 +445,11 @@ If the client changed their mind on the distance from Corpus Christi, you could 
 
 This model can now be run against similar set of data at a different site such as Seattle or Boston. If you were to run it against another set of data, some of the parameters of the Extract by attribute would have to be edited. However, that is easily done. Models allow you to streamline big workflows.
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. How does Graphical Modeler make spatial analysis easier?
 2. Export your model as a graphic and turn in with your lab.
 
-### 5 Challenge Assignment (optional)
+## 5 Challenge Assignment (optional)
 
 The client has decided that they can expand the Corpus Christi parameter from 3 miles to 3.5 miles. Edit the buffer distance in the model for the Corpus Christi buffer and determine how that changes the number of airports meeting their needs. Make a map of each scenario to show the client. You may want to output some intermediate datasets such as the Intersection or Buffers to be able to show these criteria on your maps.

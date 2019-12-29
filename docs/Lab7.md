@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 7 - Raster Data Analysis - Working with Topographic Data
-### Objective – Learn the Basics of Terrain Analysis
+# Lab 7 - Raster Data Analysis - Working with Topographic Data
+## Objective – Learn the Basics of Terrain Analysis
 
 Document Version: 4/19/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 In this lab, you will learn about topographic data and how to use it for analysis. You will learn how to create datasets such as slope, hillshades using QGIS Desktop. You will then learn how to combine them using raster algebra.
 
@@ -30,11 +29,11 @@ This lab includes the following tasks:
 + Task 2 Reclassification
 + Task 3 Raster Calculator
 
-### 2 Objective: Learn the Basics of Terrain Analysis
+## 2 Objective: Learn the Basics of Terrain Analysis
 
 The objective of this lab is to learn the basics of terrain analysis using QGIS Desktop. 
 
-### Task 1 Terrain Analysis
+## Task 1 Terrain Analysis
 
 In this task, you will use a digital elevation model to create several terrain related datasets: slope, aspect, and hillshade. These elevation derived datasets can be important in site selection and other terrain based spatial analyses.
 
@@ -128,7 +127,7 @@ The output should resemble the figure below with values ranging from ~0-360 repr
 
 13. Save your project.
 
-### Task 2 Reclassification
+## Task 2 Reclassification
 
 Now that you have created the slope and aspect data you will reclassify them into meaningful categories. Raster reclassification is a method for aggregating data values into categories. In this case, you will be reclassifying them into categories important to identifying habitat suitability for a plant. Once the slope and aspect data have been reclassified you will combine them in Task 3 to identify suitable habitat areas.
 
@@ -209,7 +208,7 @@ Now you will recode the Aspect data in the same fashion. This plant prefers west
 8. Rename the newly reclassified Aspect layer from Output raster layer to Aspect Reclassified.
 9. Save your QGIS project.
 
-### Task 3 Raster Calculator
+## Task 3 Raster Calculator
 
 Now you will use the Raster Calculator to combine the reclassified slope and aspect data. The Raster Calculator allows you to combine raster datasets mathematically to produce new outputs. For example, raster datasets can be added, subtracted, multiplied, and divided against one another. This procedure is also known as raster algebra. In this task you will add the two reclassified rasters together. Since each raster has ideal conditions coded with the value '3', an area that ends up with a pixel value of 6 would be ideal. 
 
@@ -238,16 +237,16 @@ Now you will use the Raster Calculator to combine the reclassified slope and asp
 
 5. Save your QGIS project.
 
-### 3 Conclusion
+## 3 Conclusion
 In this lab, you were exposed to terrain analysis, creating derived datasets from elevation data (DEMs). You then went on to reclassify two terrain related datasets (aspect and slope), and combine them to produce a suitable habitat layer for a plant species. This is another method of doing site selection analysis. Raster data are well suited for these types of analyses. 
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. What other real world applications of terrain analysis can you think of?
 2. How does this suitability analysis compare to the site selection analysis done with the vector data model in Lab 5?
 3. What other linear networks could this apply to other than roads?
 
-### 5 Challenge Assignment (optional)
+## 5 Challenge Assignment (optional)
 
 Another scientist is interested in developing a map of potential habitat for another species that prefers rugged, steep west facing slopes. Use the  Raster Terrain Analysis plugin to develop a Ruggedness Index. Recode the Ruggedness Index into three categories:
 

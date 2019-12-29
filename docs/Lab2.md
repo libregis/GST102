@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 2 - Introduction to Geospatial Analysis
-### Objective – Understand Attribute Table Joins and Data Classification
+# Lab 2 - Introduction to Geospatial Analysis
+## Objective – Understand Attribute Table Joins and Data Classification
 
 Document Version: 4/8/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 GIS data comes in many formats. As you collect data from various sources on the internet, you will realize that the data you acquire will not always be spatially enabled. There may be a spatial component to the data, but it is not yet a GIS dataset. For example, you may have an Excel spreadsheet with county population statistics. The data has a spatial component, county designation, however, it is not data that is ready to be mapped.  In this lab you will learn how to perform a table join to attach data to the attribute table of an existing GIS dataset. You will then learn how to classify the data.
 
@@ -29,7 +28,7 @@ This lab includes the following tasks:
 + Task 1 – Data Exploration and Joins
 + Task 2 – Data Classification
 
-### 2 Objective: Explore and Understand Geospatial Data Models
+## 2 Objective: Explore and Understand Geospatial Data Models
 
 In this lab we will look at some tabular data and determine how to join it to an existing dataset. This is a common data preparation step before we begin an analysis.
 
@@ -37,7 +36,7 @@ Join – Appending the fields of one table, to those of another table, based on 
 
 Classification – the process of breaking up data values into meaningful groups.
 
-### Task 1 - Data Exploration and Joins
+## Task 1 - Data Exploration and Joins
 	
 The data for this lab includes one shapefile: U.S. County boundaries (countyp010). The layer only covers the lower 48 contiguous states. There is also one tabular dataset: U.S. Census data (ce2000t.dbf) for counties. 
 
@@ -97,7 +96,7 @@ This join exists only within this QGIS Desktop document. In other words, the dat
 20. You can now remove the original county layer from the map by right-clicking on it in the Layers panel and choosing Remove from the context menu.
 21. Save the project as Lab 2.qgs in your lab directory.
 
-### Task 2 - Classification
+## Task 2 - Classification
 Now that you have joined data to the counties layer, you will explore different ways to symbolize the data based on the new attributes.
 
 1. Open QGIS Desktop and open Lab 2.qgs if it is not already open.
@@ -151,16 +150,16 @@ This is a much more informative depiction of total population (shown in the figu
 
 ![Changing Class Legend](figures/Changing_Class_Legend.png "Changing Class Legend")
 
-### 3 Conclusion
+## 3 Conclusion
 In this lab, you learned to join tabular data with a spatial component to a shapefile. Once that was complete, you were able to classify the data and produce different renderings of that data. Between the various classification modes, choosing the number of classes and the color ramp you have endless possibilities for displaying numeric data. The key is to remember what data pattern you are trying to share with the map reader. Then you must find a classification theme that will tell the story. These are common techniques for dealing with numeric data on maps. 
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. Describe the use of a join in GIS?
 2. Why might you want to preserve a join outside of a QGIS map document by exporting the joined layer, versus just working with the join in the map document?
 3. Why would you classify data?
 
-### 5 Challenge Assignment (optional)
+## 5 Challenge Assignment (optional)
 
 There are several more datasets in the Lab 2 Data/ChallengeData directory. There is a World_Countries shapefile and two tabular datasets: CO2_Readings_World.xls and RenewableEnergy_Percentages.dbf. Both of these tabular formats can be brought into QGIS Desktop as tables. Identify the fields by which these two tables can be joined to the World_Countries shapefile. 
 

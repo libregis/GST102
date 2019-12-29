@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 8 - Raster Data Analysis - Density Surfaces
-### Objective – Learn Density Analysis Methods
+# Lab 8 - Raster Data Analysis - Density Surfaces
+## Objective – Learn Density Analysis Methods
 
 Document Version: 4/26/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1 Introduction
+## 1 Introduction
 In this lab the students will learn about performing point density analysis. Density analysis can be used to show areas where there is a high occurrence of data. The lab will also cover converting between vector and raster data.
 
 This lab includes the following tasks:
@@ -29,11 +28,11 @@ This lab includes the following tasks:
 + Task 2 Raster to Vector Conversion
 + Task 3 Vector to Raster Conversion
 
-### 2 Objective: Learn Density Analysis Methods
+## 2 Objective: Learn Density Analysis Methods
 
 The objective of this lab is to learn about the density analysis methods and look at the conversion between the raster and vector data models. 
 
-### Task 1 Point Density
+## Task 1 Point Density
 
 Point density analysis can be used to show where there is a concentration of data points. In this task, you will be using a core QGIS plugin called Heatmap, which generates point density surfaces. 
 
@@ -82,7 +81,7 @@ Weighting the heatmap by a field provides a much more accurate picture of where 
 
 10. Save your project.
 
-### Task 2 Raster to Vector Conversion
+## Task 2 Raster to Vector Conversion
 Sometimes it is necessary to convert data between the two main data models: vector and raster. Here you will convert the population-based heat map to a vector dataset. Having the data in the vector data model allows for easier area calculations and different cartographic options (border and fill).
 
 1. Open QGIS Desktop and open Lab 8 Data/Lab8.qgs
@@ -207,7 +206,7 @@ Now that the data are in polygon form, it is straightforward to calculate their 
 19. Now you have a layer of population centers and you have calculated their acreage!
 20. Save your project.
 
-### Task 3 Vector to Raster Conversion
+## Task 3 Vector to Raster Conversion
 It can also be very useful to have data represented in the raster data model. Rasters are very useful for analysis. In the last lab, you saw how rasters can be combined via the Raster Calculator. You can convert points, lines and polygons to a raster format. One must be cognizant of the effects of cell size. The data will be generalized when the conversion from precise vector locations to cells occurs. Here you will convert a vector layer to raster.
 
 1. Open QGIS Desktop and open Lab 8 Data/Lab8.qgs.
@@ -234,16 +233,16 @@ It can also be very useful to have data represented in the raster data model. Ra
 
 ![Output Roads Raster](figures/Output_Roads_Raster.png "Output Roads Raster")
 
-### 3 Conclusion
+## 3 Conclusion
 
 In this lab, you learned how to use the Heatmap Plugin to generate point density rasters based off of both point densities and attribute values (population). Density analyses are often used to analyze data related to crimes, or the amount of fast food stores in an area. The output provides a nice overview of how close the points are, and you can choose our own variables to weight the output. Finally, using the conversion tools we can convert between raster and vector. Having data in raster form allows you to perform raster algebra operations via the Raster Calculator. Having the data in vector form allows for geometries to be easily calculated (acreage), and for more sophisticated cartographic options (border and fill).  
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. Discuss the different uses of point density.
 2. Explain how weighting a feature via an attribute changes the outcome.
 3. Is there anything we can do about the degradation of data in the conversion between vector and raster?
 
-### 5 Challenge Assignment (optional)
+## 5 Challenge Assignment (optional)
 
 In the Lab 8 Data/Challenge folder there is a shapefile containing crime data for Surrey in the United Kingdom. There is a column for crime type (Crime_type). Use this field to generate two heatmaps: one for ‘Violent Crimes’ and one for ‘Drugs’.  You will have to select records corresponding to each crime type, and save the selected features to a new shapefile for each. The heatmaps will be generated against the resulting shapefiles. 

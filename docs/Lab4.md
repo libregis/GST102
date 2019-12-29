@@ -1,6 +1,5 @@
-# GST 102: Spatial Analysis
-## Lab 4 - Vector Data Analysis - Overlay Techniques
-### Objective - Understanding Basic Vector Analysis Using Overlays
+# Lab 4 - Vector Data Analysis - Overlay Techniques
+## Objective - Understanding Basic Vector Analysis Using Overlays
 
 Document Version: 4/8/2014
 
@@ -20,7 +19,7 @@ This document was original modified from its original form by Kurt Menke and con
 
 ---
 
-### 1 Introduction
+## 1 Introduction
 
 In this lab, you will be learn about several powerful vector analysis tools. The tools are all considered overlay tools, since they produce outputs defined by how features overlap one another. You will be working with several datasets covering the Sierra National Forest in California.
 This lab includes the following tasks:
@@ -31,7 +30,7 @@ This lab includes the following tasks:
 + Task 4 - Join Attributes by Location
 
 
-### 2 Objective Understanding Basic Vector Analysis Using Overlays
+## 2 Objective Understanding Basic Vector Analysis Using Overlays
 
 The objective of this lab is for the student to understand basic use of vector overlays in a geospatial analysis. 
 
@@ -45,7 +44,7 @@ The objective of this lab is for the student to understand basic use of vector o
 
 **Join Attributes by Location** – Also known as a spatial join, this operation appends the attribute columns of one data set to another, based on the geographic intersection of the two datasets.
 
-### Task 1 - Clip
+## Task 1 - Clip
 	
 This lab focuses on the Sierra National Forest in California. Datasets include: the National Forest boundary, Ranger Districts, and habitat data for both spotted owl and Southwest willow flycatcher. In this first task, you will be clipping data to the study area. The spotted owl is listed as Threatened and the southwest willow flycatcher is listed as endangered by the U.S. Fish and Wildlife Service.
 
@@ -94,7 +93,7 @@ Your map should now resemble the figure below. Unlike selecting by location and 
 
 8. Save the project as Lab 4.qgs in the data folder.
 
-### Task 2 - Intersection
+## Task 2 - Intersection
 You will now include the southwest willow flycatcher habitat data in the analysis.
 
 1. Open QGIS Desktop and open Lab 4 Data/Lab 4.qgs if it is not already.
@@ -139,7 +138,7 @@ You will notice that in this area, there is some overlap between the Southwest w
 
 9. Save your map.
 
-### Task 3 - Union
+## Task 3 - Union
 
 You will now combine both habitat layers in different ways using both the Union and Dissolve tools. Union creates a new GIS layer that combines all the geometries of both input layers. Dissolve merges all coincident polygons together.
 
@@ -185,7 +184,7 @@ Now you will Dissolve all the polygons into one contiguous polygon layer represe
 
 8. Save your QGIS project.
 
-### Task 4 - Join Attributes by Location
+## Task 4 - Join Attributes by Location
 
 In this final task, you will incorporate the Ranger District shapefile into the analysis. There are three Ranger Districts in the Sierra National Forest. You will determine the Ranger District that each spotted owl habitat polygon is situated in. To do this you will conduct a spatial join. Unlike an attribute join done in Lab 3, a spatial join appends attributes from one layer to another based on the location. This will allow you to attach the attributes from the Ranger District layer onto the spotted owl layer.
 
@@ -221,16 +220,16 @@ Remember that data layers need to be in the same coordinate reference system whe
 11. Now use the Identify tool  ![Identify tool](figures/Identify_tool.png "Identify tool") to query the individual polygons of the Spotted_Owl_RangDist shapefile. You will see the additional Ranger District attribute columns added.
 11. Save your project.
 
-### 3 Conclusion
+## 3 Conclusion
 In this lab, you explored the use of vector overlay tools with habitat data in the Sierra National Forest. There are many similar overlay tools, which when used in combination, allow you to parse the spatial relationships of multiple data layers. These tools allow you to extract data and turn it into information by narrowing down the area of interest.
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. Describe the Clip operation.
 2. Describe the Intersect operation.
 3. How do Intersect and Clip compare in their output?
 4. Before you run an overlay tool, what aspect of your input spatial data layers should you inspect to ensure it is the same for all layers?
 
-### 5 Challenge Assignment (optional)
+## 5 Challenge Assignment (optional)
 
 The Southwest willow flycatcher data also covers multiple Ranger Districts. Conduct a spatial join between the Southwest willow flycatcher data and the Ranger districts as you did with spotted owl in the last task. Compose a map that shows the both the spotted owl and Southwest willow flycatcher data styled by the Ranger District they are situated in.
