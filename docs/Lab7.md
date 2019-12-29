@@ -42,7 +42,7 @@ In this task, you will use a digital elevation model to create several terrain r
 
 This raster layer has elevation values for each cell. This type of data is referred to as a digital elevation model, or DEM, for short. This particular dataset covers the Sandia Mountains on the east side of Albuquerque, New Mexico (shown in figure below). The light areas have the highest elevation and the dark areas the lowest elevation.
 
-![Digital Elevation Model (DEM) in QGIS Desktop](figures/Digital_Elevation_Model_(DEM)_QGIS_Desktop.png "Digital Elevation Model (DEM) in QGIS Desktop") 
+![Digital Elevation Model (DEM) in QGIS Desktop](figures/Lab7/Digital_Elevation_Model_(DEM)_QGIS_Desktop.png "Digital Elevation Model (DEM) in QGIS Desktop") 
 
 4. Let's explore the properties of the raster dataset.
 
@@ -75,11 +75,11 @@ This raster layer has elevation values for each cell. This type of data is refer
 
 	g. Click OK.
 
-![Hillshade Parameters](figures/Hillshade_Parameters.png "Hillshade Parameters")
+![Hillshade Parameters](figures/Lab7/Hillshade_Parameters.png "Hillshade Parameters")
 
 The resulting hillshade should resemble the figure below.
 
-![Hillshade Layer](figures/Hillshade_Layer.png "Hillshade Layer")
+![Hillshade Layer](figures/Lab7/Hillshade_Layer.png "Hillshade Layer")
 
 This is a grayscale hillshade rendering. Now you will use both the original DEM and the hillshade to create a color hillshade image. 
 
@@ -97,33 +97,33 @@ This is a grayscale hillshade rendering. Now you will use both the original DEM 
 
 	d. Click Classify
 
-![Styling the DEM](figures/Styling_the_DEM.png "Styling the DEM")
+![Styling the DEM](figures/Lab7/Styling_the_DEM.png "Styling the DEM")
 
 9. Switch to the Transparency tab and set the Global transparency to 50%.
 10. Click OK and close the Layer Properties.
 10. Your map should now resemble the figure below.
 
-![Color Hillshade Image](figures/Color_Hillshade_Image.png "Color Hillshade Image")
+![Color Hillshade Image](figures/Lab7/Color_Hillshade_Image.png "Color Hillshade Image")
 
 11. Now you will create a Slope dataset. From the menu bar choose Raster | Terrain Analysis | Slope.
 12. Fill out the Slope tool as shown in the figure below then click OK.
 
-![Slope Tool](figures/Slope_Tool.png "Slope Tool")
+![Slope Tool](figures/Lab7/Slope_Tool.png "Slope Tool")
 
 The slope raster shows the steepest areas in white and the flattest terrain in black. The tool determines the steepness of each pixel by comparing the elevation value of each pixel to that of the eight surrounding pixels. The slope values are degrees of slope (shown in figure below).
 
-![Slope Raster](figures/Slope_Raster.png "Slope Raster")
+![Slope Raster](figures/Lab7/Slope_Raster.png "Slope Raster")
 
 Now you will create an Aspect raster. Aspect measures which cardinal direction the terrain in each pixel is facing (north facing vs. south facing etc.)
 
 12. From the menu bar choose Raster | Terrain Analysis | Aspect. 
 13. Fill out the Aspect tool as shown in the figure below then click OK.
 
-![Aspect Tool](figures/Aspect_Tool.png "Aspect Tool")
+![Aspect Tool](figures/Lab7/Aspect_Tool.png "Aspect Tool")
 
 The output should resemble the figure below with values ranging from ~0-360 representing degrees (0=north, 90= east, 180 = south and 270 = west).
 
-![Aspect Raster](figures/Aspect_Raster.png "Aspect Raster")
+![Aspect Raster](figures/Lab7/Aspect_Raster.png "Aspect Raster")
 
 13. Save your project.
 
@@ -142,7 +142,7 @@ Now that you have created the slope and aspect data you will reclassify them int
 
 	d. Save the text file to the Lab 7 Data/MyData folder and name it Slope_Recode_Rules.txt. Close the text editor.
 
-![Slope Classification Rules](figures/Slope_Classification_Rules.png "Slope Classification Rules") 
+![Slope Classification Rules](figures/Lab7/Slope_Classification_Rules.png "Slope Classification Rules") 
 
 3. From the menu bar choose Processing | Toolbox.
 4. Expand and open the GRASS commands toolset | Raster (r.*) | r.recode - Recodes categorical raster maps.
@@ -156,7 +156,7 @@ Now that you have created the slope and aspect data you will reclassify them int
 
 	d. Click Run.
 
-![r.recode Parameters](figures/r_recode_Parameters.png "r.recode Parameters")
+![r.recode Parameters](figures/Lab7/r_recode_Parameters.png "r.recode Parameters")
 
 4. The new layer will be called Output raster layer in the Layers panel. It appears to have only two categories: 1) black and 2) white.
 5. Open the Layer Properties | Style tab and set the following options:
@@ -183,14 +183,14 @@ Now that you have created the slope and aspect data you will reclassify them int
 
 5. Now the best habitat in terms of slope has a value of 3 and the worst a value of 1 (shown in figure below).
 
-![Reclassified and Styled Slope](figures/Reclassified_and_Styled_Slope.png "Reclassified and Styled Slope")
+![Reclassified and Styled Slope](figures/Lab7/Reclassified_and_Styled_Slope.png "Reclassified and Styled Slope")
 
 Now you will recode the Aspect data in the same fashion. This plant prefers west facing slopes. Hence the west facing slopes will be set to 3, the north and south are the next best location so set them to 2, and the eastern slopes can be set 1. Remember that the values of the aspect raster are compass bearings or azimuths (270 is due west, 0 is north, 180 is south and 90 is east). You will classify the aspect data into eight cardinal directions. 
 
 6. Open Notepad and create a text file that looks like the figure below.  Save the text file to your MyData folder and name it Aspect_Recode_Rules.txt.
 7. Close the text editor.
 
-![Aspect Recode Rules](figures/Aspect_Recode_Rules.png "Aspect Recode Rules") 
+![Aspect Recode Rules](figures/Lab7/Aspect_Recode_Rules.png "Aspect Recode Rules") 
 
 7. In the Processing Toolbox, expand the GRASS commands toolset | Raster (r.*) | r.recode - Recodes categorical raster maps.
 8. Set the following tool options (shown in figure below):
@@ -203,7 +203,7 @@ Now you will recode the Aspect data in the same fashion. This plant prefers west
 
 	d. Click Run
 
-![r.recode Aspect Parameters](figures/r_recode_Aspect_Parameters.png "r.recode Aspect Parameters")
+![r.recode Aspect Parameters](figures/Lab7/r_recode_Aspect_Parameters.png "r.recode Aspect Parameters")
 
 8. Rename the newly reclassified Aspect layer from Output raster layer to Aspect Reclassified.
 9. Save your QGIS project.
@@ -228,12 +228,12 @@ Now you will use the Raster Calculator to combine the reclassified slope and asp
 
 	f. Click OK.
 
-![Raster Calculator](figures/Raster_Calculator.png "Raster Calculator")
+![Raster Calculator](figures/Lab7/Raster_Calculator.png "Raster Calculator")
 
 3. Open the Layer Properties of the PlantHabitat layer and symbolize the data with a pseudoband color with 6 equal interval classes.
 4. The final raster will resemble the figure below.
 
-![Final Habitat Analysis](figures/Final_Habitat_Analysis.png "Final Habitat Analysis")
+![Final Habitat Analysis](figures/Lab7/Final_Habitat_Analysis.png "Final Habitat Analysis")
 
 5. Save your QGIS project.
 

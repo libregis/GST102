@@ -38,7 +38,7 @@ Data dictionaries (a.k.a., look-up tables) are usually in an electronic format. 
 
 In this task, we will look at the data dictionary given to us with some census data for the lower 48 U.S. states. The census data captures many attributes about the U.S population from the 2010 Census. These attributes contain a lot of useful information. The ability to query the data allows us to expose trends in the data.
 
-![Attribute Table and Data Dictionary](figures/Attribute_Table_and_Data_Dictionary.png "Attribute Table and Data Dictionary")
+![Attribute Table and Data Dictionary](figures/Lab3/Attribute_Table_and_Data_Dictionary.png "Attribute Table and Data Dictionary")
 
 ### Task 1.1 - Using a Data Dictionary
 
@@ -47,7 +47,7 @@ In this task, we will look at the data dictionary given to us with some census d
 3. Browse to the Lab 3 Data folder, right click on the Data folder and choose Add as a Favourite. 
 4. Expand the Favourites section at the top of the tree in the Browser panel and browse to Lab 3/Data/Census folder (shown in the figure below).
 
-![Data as a Favourite](figures/Data_as_a_Favourite.png "Data as a Favourite")
+![Data as a Favourite](figures/Lab3/Data_as_a_Favourite.png "Data as a Favourite")
 
 6. Select the State_2010Census_DP1 layer and drag it onto the map canvas to add it to QGIS Desktop.
 7. Now you will set the coordinate reference system for the map. From the menu bar go to Project | Project Properties. 
@@ -60,7 +60,7 @@ There are a lot of attribute columns. It is clear that a naming convention has b
 9. Close the attribute table.
 10. The data dictionary is located in DP_TableDescriptions.xls. Click the Add vector data button and browse to the Lab 3/Data/Census folder. If you don’t see the spreadsheet, change the file filter in the lower right corner to All files (*)(*.*). Select the spreadsheet and click Open (shown in figure below). 
 
-![Adding the Data Dictionary Spreadsheet to QGIS Desktop](figures/Adding_the_Data_Dictionary_Spreadsheet_to_QGIS_Desktop.png "Adding the Data Dictionary Spreadsheet to QGIS Desktop")
+![Adding the Data Dictionary Spreadsheet to QGIS Desktop](figures/Lab3/Adding_the_Data_Dictionary_Spreadsheet_to_QGIS_Desktop.png "Adding the Data Dictionary Spreadsheet to QGIS Desktop")
 
 We will map the male population under age 5 for the lower 48. To determine which field in the state census shapefile contains that data, we need to consult the data dictionary table.
 
@@ -78,7 +78,7 @@ The data dictionary table has two columns: Item and Stub. Item contains the fiel
 	+ Classes = 5
 	+ Color ramp = Blues
 
-![Under Age 5 Population of the Lower 48](figures/Under_Age_5_Population_of_the_Lower_48.png "Under Age 5 Population of the Lower 48")
+![Under Age 5 Population of the Lower 48](figures/Lab3/Under_Age_5_Population_of_the_Lower_48.png "Under Age 5 Population of the Lower 48")
 
 14. Save your map. You will be using this QGIS Desktop project in task 1.2
 
@@ -88,7 +88,7 @@ Using the map you have just created in Task 1.1, you will now perform some queri
 
 1. If you do not have it open, open the Lab 3 Census.qgs project created in Task 1.1.
 3. Open the attribute table for the Census layer. 
-4. Click the Select features using an expression button ![expression button](figures/expression_button.png "expression button") . The Select by Expression window opens.
+4. Click the Select features using an expression button ![expression button](figures/Lab3/expression_button.png "expression button") . The Select by Expression window opens.
 4. You have mapped the states by the under 5 male population. Now you want to know which states have a total population less than 1,000,000. The figure below shows the layout of the Select by Expression window.
 
 	+ Fields and Values are included in the list of functions. You can expand the list to see the fields in the dataset.
@@ -96,7 +96,7 @@ Using the map you have just created in Task 1.1, you will now perform some queri
 	+ The expression window. Double-clicking on Fields, Values and Operators will place those objects in the expression window. It is best to build your expression this way instead of trying to type it. This will allow you to avoid syntax errors.
 	+ Select options: By default, you will create a new selection. However, you can choose to add to an already existing selection, have records removed from an existing selection, or select from an existing selected set. 
 
-![Select by Expression Window](figures/Select_by_Expression_Window.png "Select by Expression Window")
+![Select by Expression Window](figures/Lab3/Select_by_Expression_Window.png "Select by Expression Window")
 
 5. First, you will have to refer to the data dictionary to see which field contains the total population values. To select those states with a total population less than 1,000,000 you will:
 
@@ -106,22 +106,22 @@ Using the map you have just created in Task 1.1, you will now perform some queri
 
 6. If your expression looks like the figure below. Click Select to perform the selection then close the Select by expression window.
 
-![Population Select by Expression Window](figures/Population_Select_by_Expression_window.png "Population Select by Expression Window")
+![Population Select by Expression Window](figures/Lab3/Population_Select_by_Expression_window.png "Population Select by Expression Window")
 
 7. The selected records are highlighted in blue in the attribute table. 
 8. Click the Show All Features dropdown (bottom-left corner of attribute table window) and choose Show Selected Records. Now you are viewing only the 7 selected records.
 9. Click on the DP0010001 header to sort the selected records by total population. Now you can easily see which state has the highest and which has the lowest population among the seven selected (shown in figure below). 
 
-![Seven Selected Records Sorted by Total Population](figures/Seven_Selected_Records_Sorted_by_Total_Population.png "Seven Selected Records Sorted by Total Population")
+![Seven Selected Records Sorted by Total Population](figures/Lab3/Seven_Selected_Records_Sorted_by_Total_Population.png "Seven Selected Records Sorted by Total Population")
 
 9. Close the attribute table.
 10. The corresponding features are selected in the map as well. Your map should now resemble the figure below.
 
-![States With a Total Population Less Than 1,000,000 Selected](figures/States_with_a_Total_Population_Less_Than_1,000,000_Selected.png "States With a Total Population Less Than 1,000,000 Selected")
+![States With a Total Population Less Than 1,000,000 Selected](figures/Lab3/States_with_a_Total_Population_Less_Than_1,000,000_Selected.png "States With a Total Population Less Than 1,000,000 Selected")
 
 11. Re-open the attribute table and create an expression selecting the states with a total population greater than 10,000,000.  Your map should now match the figure below with seven selected states.
 
-![States With a Total Population Greater than 10,000,000 Selected](figures/States_with_a_Total_Population_Greater_than_10,000,000_Selected.png "States With a Total Population Greater than 10,000,000 Selected")
+![States With a Total Population Greater than 10,000,000 Selected](figures/Lab3/States_with_a_Total_Population_Greater_than_10,000,000_Selected.png "States With a Total Population Greater than 10,000,000 Selected")
 
 ## Task 2 - Buffering and Spatial Queries
 Buffering is a key vector analysis tool in GIS. It gives us the ability to create a new GIS layer representing a buffer distance from some map feature(s).
@@ -131,13 +131,13 @@ Buffering is a key vector analysis tool in GIS. It gives us the ability to creat
 1. Open QGIS Desktop and open Lab 3 Data/Tornado/Tornado.qgs.
 2. The redline represents a tornados path through a residential area. The approximate area of damage was 900 meters around the path. The green polygons represent schools in the area, the parcels are in yellow and the roads black lines.
 
-![Tornado Path QGIS Project](figures/Tornado_Path_QGIS_Project.png "Tornado Path QGIS Project")
+![Tornado Path QGIS Project](figures/Lab3/Tornado_Path_QGIS_Project.png "Tornado Path QGIS Project")
 
 To identify the area impacted by the tornado, you will create a 900 meter buffer around the path.
 
 3. From the menu bar choose Vector | Geoprocessing Tools | Buffer(s). Fill out the Buffer tool with the parameters seen in the figure below.
 
-![Tornado Path QGIS Project 2](figures/Tornado_Path_QGIS_Project_2.png "Tornado Path QGIS Project 2")
+![Tornado Path QGIS Project 2](figures/Lab3/Tornado_Path_QGIS_Project_2.png "Tornado Path QGIS Project 2")
 
 5. Click OK to run the tool, and click Close when it has finished.
 
@@ -145,7 +145,7 @@ A new polygon layer is created that covers all the land 900 meters from the torn
 
 6. Open the Layer Properties for the buffer layer and choose the Style tab. Set the Layer transparency to 50% (shown in figure below).
 
-![Tornado Buffer](figures/Tornado_Buffer.png "Tornado Buffer")
+![Tornado Buffer](figures/Lab3/Tornado_Buffer.png "Tornado Buffer")
 
 Looking at the result we can immediately see the areas affected by the tornado.
 
@@ -161,12 +161,12 @@ Using select by location, you can conduct spatial queries. In this case, we can 
 
 5. Fill out the Select by location form as in the figure below. Click OK to perform the buffer, then click Close. 
 
-![Select by Location](figures/Select_by_Location.png "Select by Location")
+![Select by Location](figures/Lab3/Select_by_Location.png "Select by Location")
 
 4. The parcels that intersect the tornado buffer are now selected. However, the default yellow selection color is very close to the yellow color of the parcels. To change the selection color go to the menu bar choose Project | Project Properties and click on the General tab. 
 5. Change the Selection color to a blue color so the selected parcels stand out better (shown in figure below).
 
-![Affected Parcels Selected](figures/Affected_Parcels_Selected.png "Affected Parcels Selected")
+![Affected Parcels Selected](figures/Lab3/Affected_Parcels_Selected.png "Affected Parcels Selected")
 
 From here, you could save out the selected parcels as a new shapefile. To do this you would right-click on the parcel layer and choose Save As… then check Save only selected features. You could also open the parcel attribute table and Show Selected Features to examine the attributes of those affected parcels. 
 
@@ -179,7 +179,7 @@ From here, you could save out the selected parcels as a new shapefile. To do thi
 
 The results are shown in the figure below. Now you know the total value of the affected parcels! This is a great example of how you can generate information from GIS data.
 
-![Statistics on the Total Value of the Affected Parcels](figures/Statistics_on_the_Total_Value_of_the_Affected_Parcels.png "Statistics on the Total Value of the Affected Parcels")
+![Statistics on the Total Value of the Affected Parcels](figures/Lab3/Statistics_on_the_Total_Value_of_the_Affected_Parcels.png "Statistics on the Total Value of the Affected Parcels")
 
 ## 3 Conclusion
 In this lab, you explored the use of data dictionaries with coded field names. You experienced another example of using attribute table queries. You used a buffer operation combined with the select by location operation and basic statistics tools to determine to total value of parcels impacted by a tornado. 

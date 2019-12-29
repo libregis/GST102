@@ -45,7 +45,7 @@ The objective of this lab is for the student to learn how to conduct a site sele
 	+ Water_features
 3. Arrange the data layers so that points are on top of lines, which are on top of polygons. Move the CityBoundaries polygon layer above the Counties layer (reference figure below).
 
-![Site Selection Data Layers](figures/Site_Selection_Data_Layers.png "Site Selection Data Layers") 
+![Site Selection Data Layers](figures/Lab5/Site_Selection_Data_Layers.png "Site Selection Data Layers") 
 
 Clearly the data layers cover a variety of spatial extents. One likely step will be to Clip them so that they all cover the same spatial extent.
 
@@ -108,7 +108,7 @@ In the Process Toolbox, there is a default folder for Models, and if saved there
 6. Double-click the Models folder and an ellipsis button will appear to the right.
 7. Click on the ellipsis button, navigate to the Lab 5 Data folder, create a new subfolder named 'MyData', and click Select the new folder (shown in figure below).
 
-![Processing options](figures/Processing_options.png "Processing options")
+![Processing options](figures/Lab5/Processing_options.png "Processing options")
 
 8. Click OK to close the Processing options.
 
@@ -120,7 +120,7 @@ The left hand panel has two tabs Inputs and Algorithms. The model itself will be
 
 5. At the top of the main design window are two text fields: [Enter model name here] and [Enter group name here]. Name the model Helipad Site Selection and the Group GST 102 (shown in figure below).
 
-![Model Name and Group](figures/Model_Name_and_Group.png "Model Name and Group")
+![Model Name and Group](figures/Lab5/Model_Name_and_Group.png "Model Name and Group")
 
 6. Next you will save your model. Click the Save button. It should now open a Save Model dialog and default to the MyData folder.
 7. Name it HelipadSelection.model and click Save. It will be saved as a .model file. You should receive the Model was correctly saved message. Click OK.
@@ -135,21 +135,21 @@ The Parameter definition window opens. Here you are simply defining the conceptu
 9. Set the Shape type to Polygon.
 10. Set the Required parameter to Yes. If your Parameter definitions look like the figure below, click OK.
 
-![Parameter Definition](figures/Parameter_Definition.png "Parameter Definition")
+![Parameter Definition](figures/Lab5/Parameter_Definition.png "Parameter Definition")
 
 The Counties lyr parameter will now appear in the design window (shown in figure below).
 
-![Counties lyr Parameter Added to the Graphical Modeler](figures/Counties_lyr_Parameter_Added_to_the_Graphical_Modeler.png "Counties lyr Parameter Added to the Graphical Modeler")
+![Counties lyr Parameter Added to the Graphical Modeler](figures/Lab5/Counties_lyr_Parameter_Added_to_the_Graphical_Modeler.png "Counties lyr Parameter Added to the Graphical Modeler")
 
 9. The next input parameter will be a Table field. Double-click on Table field.
 10. Set the Parameter name to CountyName attr and the Parent layer to Counties lyr. *Note*: Ending the name with ‘attr’ will be the naming convention for Table field Inputs.
 10. If your Parameter definitions look like the figure below, click OK.
 
-![CountiesName attr Parameter Definition](figures/CountiesName_attr_Parameter_Definition.png "CountiesName attr Parameter Definition")
+![CountiesName attr Parameter Definition](figures/Lab5/CountiesName_attr_Parameter_Definition.png "CountiesName attr Parameter Definition")
 
 10. Drag the CountyName attr input so that it is below Counties lyr (shown in figure below). You can arrange the model elements into an attractive and intuitive flow.
 
-![Two Inputs Added](figures/Two_Inputs_Added.png "Two Inputs Added")
+![Two Inputs Added](figures/Lab5/Two_Inputs_Added.png "Two Inputs Added")
 
 11. Now you will add the Extract by attribute algorithm. Click on the Algorithms tab. It looks a lot like the Toolbox.
 12. Double-click on QGIS geoalgorithms | Vector selection tools | Extract by attribute. The Extract by attribute window opens Fill it out as follows (reference figure below):
@@ -170,23 +170,23 @@ The Counties lyr parameter will now appear in the design window (shown in figure
 
 13. Click OK to set the parameters for the Extract by attribute algorithm.
 
-![Extract by Attribute Settings](figures/Extract_by_Attribute_Settings.png "Extract by Attribute Settings")
+![Extract by Attribute Settings](figures/Lab5/Extract_by_Attribute_Settings.png "Extract by Attribute Settings")
 
-The first complete algorithm has been added! You can drag the parameter boxes to arrange them as you would like and the connecting arrows will follow (example in figure below). You can also click on the Edit button ![Edit button](figures/Edit_button.png "Edit button")  on any model parameter at any time. This will reopen the algorithm window or model parameter window, from there you can make changes if necessary.
+The first complete algorithm has been added! You can drag the parameter boxes to arrange them as you would like and the connecting arrows will follow (example in figure below). You can also click on the Edit button ![Edit button](figures/Lab5/Edit_button.png "Edit button")  on any model parameter at any time. This will reopen the algorithm window or model parameter window, from there you can make changes if necessary.
 
-![Model with Nueces County Created by Extract by Attribute](figures/Model_with_Nueces_County_Created_by_Extract_by_Attribute.png "Model with Nueces County Created by Extract by Attribute")
+![Model with Nueces County Created by Extract by Attribute](figures/Lab5/Model_with_Nueces_County_Created_by_Extract_by_Attribute.png "Model with Nueces County Created by Extract by Attribute")
 
 13. Save the model and close the Graphical Modeler window.
 14. From the Processing Toolbox panel, expand Models | GST 102. There is your model (shown in figure below).
 
-![Helipad Site Selection Model in Toolbox](figures/Helipad_Site_Selection_Model_in_Toolbox.png "Helipad Site Selection Model in Toolbox")
+![Helipad Site Selection Model in Toolbox](figures/Lab5/Helipad_Site_Selection_Model_in_Toolbox.png "Helipad Site Selection Model in Toolbox")
 
 Your model is obviously not yet complete. However, it is already a geoprocessing tool that you can open, set parameters for, and run. Let's try the model out to see what happens with its current configuration.
 
 15. Double-click on the Helipad Site Selection model in the Processing Toolbox to open the model as a tool.
 16. Set Counties lyr to Counties, CountyName attr to COUNTY and keep Nueces County as a temporary file for now (Do not fill it in!) (reference figure below).
 
-![Helipad Site Selection](figures/Helipad_Site_Selection.png "Helipad Site Selection")
+![Helipad Site Selection](figures/Lab5/Helipad_Site_Selection.png "Helipad Site Selection")
 
 17. Click Run. The temporary NuecesCounty layer will be added to QGIS Desktop. Zoom in and verify that Nueces county was correctly selected using the tooo.
 15. For now, remove this layer from QGIS Desktop and then save your QGIS project.
@@ -197,20 +197,20 @@ Now that your basic model is set up, you will add additional functionality to it
 
 1. Open QGIS Desktop and open Lab 5.qgs if it is not already.
 2. From the menu bar now choose Processing | Graphical Modeler.
-3. Once the Graphical Modeler opens, click the Open Model ![Open Model](figures/Open_Model.png "Open Model")  button and open the Helipad Site Selection model (if it is not already open). 
+3. Once the Graphical Modeler opens, click the Open Model ![Open Model](figures/Lab5/Open_Model.png "Open Model")  button and open the Helipad Site Selection model (if it is not already open). 
 
 3. Now you will add a parameter for Airports. Click the Vector layer input parameter and fill out the Parameter definition as in the figure below.
 
-![Airports Parameter Definition](figures/Airports_Parameter_Definition.png "Airports Parameter Definition")
+![Airports Parameter Definition](figures/Lab5/Airports_Parameter_Definition.png "Airports Parameter Definition")
 
 4. You will clip Airports with the Nueces County layer. Click on the Algorithms tab and select QGIS geoalgorithms | Vector overlay tools | Clip. The Clip tool will open.
 5. Set the Input layer to Airports lyr and the Clip layer to 'Output' from algorithm 'Extract by attribute' (reference figure below).
 
-![Clip_Algorithm_Parameters](figures/Clip_Algorithm_Parameters.png "Clip_Algorithm_Parameters")
+![Clip_Algorithm_Parameters](figures/Lab5/Clip_Algorithm_Parameters.png "Clip_Algorithm_Parameters")
 
 Your model should now resemble the figure below.
 
-![Clip Algorithm Added to Model](figures/Clip_Algorithm_Added_to_Model.png "Clip Algorithm Added to Model")
+![Clip Algorithm Added to Model](figures/Lab5/Clip_Algorithm_Added_to_Model.png "Clip Algorithm Added to Model")
 
 Now you will work with the CityBoundaries. This is the most involved parameter because the site must be both within 3 miles of Corpus Christi and beyond the Corpus Christi city limits.
 
@@ -280,7 +280,7 @@ The last parameter detail related to the boundary of Corpus Christi is that the 
 
 Your model should now resemble the figure below.
 
-![Model Incorporating Corpus Christi](figures/Model_Incorporating_Corpus_Christi.png "Model Incorporating Corpus Christi")
+![Model Incorporating Corpus Christi](figures/Lab5/Model_Incorporating_Corpus_Christi.png "Model Incorporating Corpus Christi")
 
 Now you will work on the Roads parameter. First, the County roads will be selected. Then those County roads will be buffered by one mile
 
@@ -340,7 +340,7 @@ Now you will work on the Roads parameter. First, the County roads will be select
 
 Your model should now resemble the figure below.
 
-![Model Incorporating Roads](figures/Model_Incorporating_Roads.png "Model Incorporating Roads")
+![Model Incorporating Roads](figures/Lab5/Model_Incorporating_Roads.png "Model Incorporating Roads")
 
 The last parameter to address the distance to Water Features which be buffered by 0.5 miles.
 
@@ -374,7 +374,7 @@ The last parameter to address the distance to Water Features which be buffered b
 
 Your model should now resemble the figure below.
 
-![Model Incorporating Water Features](figures/Model_Incorporating_Water_Features.png "Model Incorporating Water Features")
+![Model Incorporating Water Features](figures/Lab5/Model_Incorporating_Water_Features.png "Model Incorporating Water Features")
 
 20. Save the model.
 
@@ -383,7 +383,7 @@ Your model should now resemble the figure below.
 In this final task, you will combine all the individual parameters into one layer representing the combination of all parameters. This will represent the acceptable area for helipad locations. Then you will run a clip algorithm on airports to determine which airports meet all the criteria.
  
 1. Open QGIS Desktop and open Lab 5.qgs if it is not already.
-2. From the menu bar now choose Processing | Graphical Modeler. Once the Graphical Modeler open click the Open Model ![Open Model](figures/Open_Model.png "Open Model") button and open the Helipad Site Selection model.
+2. From the menu bar now choose Processing | Graphical Modeler. Once the Graphical Modeler open click the Open Model ![Open Model](figures/Lab5/Open_Model.png "Open Model") button and open the Helipad Site Selection model.
 
 You can combine the water buffer, county roads buffer and the 3 mile ring around Corpus Christi using the Intersect algorithm. This will compute the area of overlap between the three layers.
 
@@ -397,14 +397,14 @@ You can combine the water buffer, county roads buffer and the 3 mile ring around
 
 	d. Since we need to Intersect more than two layers, we need to set two parent algorithms. Click the ellispsis button for the Parent algorithms parameter. When the Multiple Selection window opens check the bottom two Fixed distance buffer representing the roads and water buffers (reference figure below).
 
-![Multiple Selection](figures/Multiple_Selection.png "Multiple Selection")
+![Multiple Selection](figures/Lab5/Multiple_Selection.png "Multiple Selection")
 
 4. Click OK to set the Multiple Selection.
 5. Click OK to set the Intersection parameters.
 
 The model will now look like the figure below with the Intersect algorithm taking all three inputs.
 
-![Model with Intersect Added](figures/Model_with_Intersect_Added.png "Model with Intersect Added")
+![Model with Intersect Added](figures/Lab5/Model_with_Intersect_Added.png "Model with Intersect Added")
 
 5. Finally, you will clip the airports with the output of the Intersect giving you the final solution. Click on the Algorithms tab and choose QGIS geoalgorithms | Vector overlay tools | Clip. Use the following parameters:
 
@@ -416,7 +416,7 @@ The model will now look like the figure below with the Intersect algorithm takin
 
 The final model should resemble the figure below.
 
-![Final Model](figures/Final_Model.png "Final Model")
+![Final Model](figures/Lab5/Final_Model.png "Final Model")
 
 *Note on the Final Clip Algorithm*: At this time, there is a new bug that may prevent the final clip from working in the model. The error will be reported in the Log tab on the final step in red and it will read: *Error executing algorithm 9 [Errno 9] Bad file descriptor See log for more details.* This bug is not present on all installations and all platforms. If you do not get this you can ignore this note. However, if you receive this error, simply end the model with the Intersection, and save out the output of the Intersection to your MyData folder. You can then perform the final clip manually.
 
@@ -425,13 +425,13 @@ The final model should resemble the figure below.
 9. From the Toolbox panel, expand Models | GST 102. 
 10.	Double-click on Helipad Site Selection. Fill out all the parameters as shown in the figure below. Click Run when ready.
 
-![Helipad Site Selection Model Inputs](figures/Helipad_Site_Selection_Model_Inputs.png "Helipad Site Selection Model Inputs")
+![Helipad Site Selection Model Inputs](figures/Lab5/Helipad_Site_Selection_Model_Inputs.png "Helipad Site Selection Model Inputs")
 
 If the model ran correctly, the FinalSolution layer should contain Cuddihy Field as the only selected airport (shown in figure below).
 
-![Final Solution](figures/Final_Solution.png "Final Solution")
+![Final Solution](figures/Lab5/Final_Solution.png "Final Solution")
 
-*Note on Running Models*: Models can also be run from the Graphical Modeler interface. You can click the Run model ![Run model button](figures/Run_model_button.png "Run model button") button. You will be prompted to Save the model, then you will be presented with the same model window shown in the figure below.
+*Note on Running Models*: Models can also be run from the Graphical Modeler interface. You can click the Run model ![Run model button](figures/Lab5/Run_model_button.png "Run model button") button. You will be prompted to Save the model, then you will be presented with the same model window shown in the figure below.
 
 *Note on Debugging Models*: Here we have written out the vast majority of outputs to temporary files. If you get an error or an incorrect result, it can be helpful to save out questionable intermediate datasets. For example, say you are getting an error or an unexpected result from a buffer operation. Try outputting the result of the Extract by attribute dataset that feeds into the buffer algorithm. This will let you determine if the prior step is working correctly. To do this all you have to do is enter a name for the output in question like you did for Nueces County and the Final Solution.
 
@@ -439,7 +439,7 @@ If the model ran correctly, the FinalSolution layer should contain Cuddihy Field
 In this lab you have been exposed to both site selection modeling and the use of Graphical Modeler in building a workflow. Building the model is certainly time consuming. However, the benefits are many, especially if this is a workflow you will have to perform many times. 
 
 By clicking on the Export as image button 
-![Graphical Modeler button](figures/Graphical_Modeler_button.png "Graphical Modeler button")  in the Graphical Modeler you can export the model to a graphic. This graphic can then be included in a report or a presentation. This can help you explain the technical workflow to others.
+![Graphical Modeler button](figures/Lab5/Graphical_Modeler_button.png "Graphical Modeler button")  in the Graphical Modeler you can export the model to a graphic. This graphic can then be included in a report or a presentation. This can help you explain the technical workflow to others.
 
 If the client changed their mind on the distance from Corpus Christi, you could simply adjust that buffer distance in the model, and re run it to see how the solution changed. Without the model, you would be starting from scratch in this scenario. 
 

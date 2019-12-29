@@ -48,11 +48,11 @@ The objective of this lab is for the student to understand basic use of vector o
 	
 This lab focuses on the Sierra National Forest in California. Datasets include: the National Forest boundary, Ranger Districts, and habitat data for both spotted owl and Southwest willow flycatcher. In this first task, you will be clipping data to the study area. The spotted owl is listed as Threatened and the southwest willow flycatcher is listed as endangered by the U.S. Fish and Wildlife Service.
 
-![Southwest Willow Flycatcher](figures/Southwest_Willow_Flycatcher.jpg "Southwest Willow Flycatcher")
+![Southwest Willow Flycatcher](figures/Lab4/Southwest_Willow_Flycatcher.jpg "Southwest Willow Flycatcher")
 
 *Photo credit: Jim Rorabaugh/USFWS [Public domain]*
 
-![Spotted Owl](figures/Spotted_Owl.jpg "Spotted Owl")
+![Spotted Owl](figures/Lab4/Spotted_Owl.jpg "Spotted Owl")
 
 *Photo credit: John and Karen Hollingsworth; photo by USFS Region 5 (Pacific Southwest) [Public domain]*
 
@@ -60,7 +60,7 @@ This lab focuses on the Sierra National Forest in California. Datasets include: 
 2. From the lab directory, add both the Sierra_Natl_Forest.shp and CA_Spotted_Owl_HmRngCore.shp shapefiles to QGIS Desktop.
 3. Move the Sierra National Forest layer below the spotted owl layer so the map canvas resembles the figure below.
 
-![Sierra National Forest and Spotted Owl Data in QGIS](figures/Sierra_National_Forest_and_Spotted_Owl_data_in_QGIS.png "Sierra National Forest and Spotted Owl Data in QGIS") 
+![Sierra National Forest and Spotted Owl Data in QGIS](figures/Lab4/Sierra_National_Forest_and_Spotted_Owl_data_in_QGIS.png "Sierra National Forest and Spotted Owl Data in QGIS") 
 
 In this case, you are only interested in the data covering the Sierra National Forest. Notice that the spotted owl data covers far more territory than the forest. Therefore, you will clip the spotted owl data to the forest boundary. Clip will create a new shapefile consisting of the spotted owl polygons within the forest boundary. It is standard protocol to clip datasets to the extent of the study area. This reduces data to only that which needs to be processed, and makes processing and rendering faster.
 
@@ -89,7 +89,7 @@ Before conducting a spatial analysis, you need to ensure that all the involved l
 
 Your map should now resemble the figure below. Unlike selecting by location and exporting the selected set to a new layer, the Clip operation actually cuts spotted owl polygons at the forest boundary where they crossed the forest boundary.
 
-![Spotted Owl Data Clipped to the Forest Boundary](figures/Spotted_Owl_Data_Clipped_to_the_Forest_Boundary.png "Spotted Owl Data Clipped to the Forest Boundary") 
+![Spotted Owl Data Clipped to the Forest Boundary](figures/Lab4/Spotted_Owl_Data_Clipped_to_the_Forest_Boundary.png "Spotted Owl Data Clipped to the Forest Boundary") 
 
 8. Save the project as Lab 4.qgs in the data folder.
 
@@ -110,13 +110,13 @@ You will now include the southwest willow flycatcher habitat data in the analysi
 
 4. Your map should now resemble the figure below.
 
-![All Three Layers in QGIS](figures/All_Three_Layers_in_QGIS.png "All Three Layers in QGIS") 
+![All Three Layers in QGIS](figures/Lab4/All_Three_Layers_in_QGIS.png "All Three Layers in QGIS") 
 
-5. Use the Zoom in tool  ![Zoom in tool](figures/Zoom_in_tool.png "Zoom in tool") to drag a box and zoom in to the area outlined in black in the figure above.
+5. Use the Zoom in tool  ![Zoom in tool](figures/Lab4/Zoom_in_tool.png "Zoom in tool") to drag a box and zoom in to the area outlined in black in the figure above.
 
 You will notice that in this area, there is some overlap between the Southwest willow flycatcher and spotted owl habitat (shown figure below). Since these are both sensitive species, areas of habitat overlap will be important areas to protect. You could certainly conduct a spatial query to select Southwest willow flycatcher polygons that overlap spotted owl polygons. However, here you will see the value of using the Intersect tool to identify these overlapping areas.
 
-![Overlap areas](figures/Overlap_areas.png "Overlap areas")
+![Overlap areas](figures/Lab4/Overlap_areas.png "Overlap areas")
 
 6. From the menu bar choose Vector | Geoprocessing Tools | Intersect. Fill out the form with the following (also shown in figure below):
 
@@ -128,13 +128,13 @@ You will notice that in this area, there is some overlap between the Southwest w
 
 	d. Add result to canvas checked
 
-![Intersect Tool](figures/Intersect_tool.png "Intersect Tool")
+![Intersect Tool](figures/Lab4/Intersect_tool.png "Intersect Tool")
 
 7. When finished, Click OK to perform the intersect operation, and then click Close.
 8. Drag the OverlapAreas layer to the top of the layers list in the Layers panel so it draws on top of all other layers.
 8. Style the OverlapAreas with a bright yellow Fill and Border. Your map should now resemble the figure below.
 
-![Areas of Habitat Overlap](figures/Areas_of_Habitat_Overlap.png "Areas of Habitat Overlap")
+![Areas of Habitat Overlap](figures/Lab4/Areas_of_Habitat_Overlap.png "Areas of Habitat Overlap")
 
 9. Save your map.
 
@@ -154,13 +154,13 @@ You will now combine both habitat layers in different ways using both the Union 
 
 	d. Add result to canvas checked
 
-![Union Tool](figures/Union_tool.png "Union Tool")
+![Union Tool](figures/Lab4/Union_tool.png "Union Tool")
 
 3. When finished Click OK to perform the Union operation, and then click Close.
 
 The output contains all the polygons from both layers (shown in figure below). In addition, all the polygons retain their original attributes! Overlapping areas receive attributes from the Union layer (Sierra_WillowFlycatcher). 
 
-![Union Output](figures/Union_Output.png "Union Output")
+![Union Output](figures/Lab4/Union_Output.png "Union Output")
 
 Now you will Dissolve all the polygons into one contiguous polygon layer representing areas of habitat for both species.
 
@@ -175,12 +175,12 @@ Now you will Dissolve all the polygons into one contiguous polygon layer represe
 
 	d. Add results to canvas checked
 
-![Dissolve Tool](figures/Dissolve_tool.png "Dissolve Tool")
+![Dissolve Tool](figures/Lab4/Dissolve_tool.png "Dissolve Tool")
 
 6. When finished Click OK to perform the dissolve operation, and then click Close.
 7. The figure below shows the output of the Dissolve operation.
 
-![Dissolve Output](figures/Dissolve_Output.png "Dissolve Output")
+![Dissolve Output](figures/Lab4/Dissolve_Output.png "Dissolve Output")
 
 8. Save your QGIS project.
 
@@ -201,23 +201,23 @@ Remember that data layers need to be in the same coordinate reference system whe
 5. Right-click on Sierra_Ranger_Dist in the Layers panel and choose Save as…
 5. Fill out the  Save vector layer as… form as shown in the figure below. You can find the output coordinate reference system by searching on the EPSG code for CA Albers: 3310.
 
-![Save vector layer as...](figures/Save_Vector_Layer_as.png "Save vector layer as")
+![Save vector layer as...](figures/Lab4/Save_Vector_Layer_as.png "Save vector layer as")
 
 6. Once the layer has been re-projected, remove the original Ranger District layer from the Layers panel. 
 7. Style the new Albers Ranger District layer with a Transparent Fill and a Border of dark green (result shown in figure below).
 
-![Albers Ranger Districts Layer Added to Map and Styled](figures/Albers_Ranger_Districts_Layer_Added_to_Map_and_Styled.png "Albers Ranger Districts Layer Added to Map and Styled")
+![Albers Ranger Districts Layer Added to Map and Styled](figures/Lab4/Albers_Ranger_Districts_Layer_Added_to_Map_and_Styled.png "Albers Ranger Districts Layer Added to Map and Styled")
 
 8. Now you are ready to conduct the spatial join. From the menu bar, choose Vector | Data Management Tools | Join Attributes by Location.
 9. Fill out the form to match figure below below. The output will be in the form of a new spotted owl habitat shapefile with Ranger District attributes appended.
 
-![Spatial Join Tool](figures/Spatial_Join_Tool.png "Spatial Join Tool")
+![Spatial Join Tool](figures/Lab4/Spatial_Join_Tool.png "Spatial Join Tool")
 
 9. Click OK to perform the join. 
 10. When finished confirm that you want the layer added to the map.
 11. Click Close to close the Join attributes by location window.
 10. Select the Spotted_Owl_RangDist layer in the Layers panel by clicking on it once.
-11. Now use the Identify tool  ![Identify tool](figures/Identify_tool.png "Identify tool") to query the individual polygons of the Spotted_Owl_RangDist shapefile. You will see the additional Ranger District attribute columns added.
+11. Now use the Identify tool  ![Identify tool](figures/Lab4/Identify_tool.png "Identify tool") to query the individual polygons of the Spotted_Owl_RangDist shapefile. You will see the additional Ranger District attribute columns added.
 11. Save your project.
 
 ## 3 Conclusion

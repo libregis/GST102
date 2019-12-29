@@ -45,7 +45,7 @@ In order to map the data in the table, we will need to join it to the county sha
 1. Open QGIS Desktop and add the County shapefile.
 3. Open the attribute table and examine the contents (shown in figure below).
 
-![Counties Attribute Table](figures/Counties_Attribute_Table.png "Counties Attribute Table")
+![Counties Attribute Table](figures/Lab2/Counties_Attribute_Table.png "Counties Attribute Table")
 
 You can see that there are 3,283 records in the table. What kind of attributes does this data set have? The Area and Perimeter fields are created as part of the file format (shapefile). These represent the area and perimeter of each feature in map units. Since this dataset is in the Geographic Coordinate System these units are in decimal degrees. This is a difficult unit to work with so these values do not provide add much information. The Square_Mil field at the far right is much more useful. This holds the area of each polygon in square miles. CountyP010 is an unique ID. Then there are fields for State abbreviation, county name and FIPS codes. 
 
@@ -62,12 +62,12 @@ What field can be used to join this to the Counties attribute table? At first yo
 
 Notice that there are numerous Adams County entries from several states (shown in figure below). Therefore, County name is not a unique ID. However, the FIPS column is a unique ID that will be used to join to the FIPS column in the shapefile.
 
-![Table Sorted By County](figures/Table_sorted_by_County.png "Table Sorted By County")
+![Table Sorted By County](figures/Lab2/Table_sorted_by_County.png "Table Sorted By County")
 
 10. Close the attribute table.
 11. Right-click on the countyp010 layer and choose Properties from the context menu to open the Layer Properties window.
 12. Click on the Joins tab. This is where you configure joins for the layer. 
-13. Click the Add Join button ![Add Join button](figures/Add_Join_button.png "Add Join button") . The Add vector join window opens. 
+13. Click the Add Join button ![Add Join button](figures/Lab2/Add_Join_button.png "Add Join button") . The Add vector join window opens. 
 
 The Join layer is the table you will join to the shapefiles attribute table. Since you only have one table in your Table of Contents there is only one choice: ce2000t. Since you’ve previewed both the county layer attribute table and ce2000t you know that the Join field is FIPS and the Target field is also FIPS.
 
@@ -76,12 +76,12 @@ The Join layer is the table you will join to the shapefiles attribute table. Sin
 
 *Note*: In this example both join fields have the same name. However, this is not a requirement. Both fields do need to have the same data type. For example, they need to both be text fields or both integer fields.
 
-![Add Vector Join](figures/Add_vector_join.png "Add Vector Join")
+![Add Vector Join](figures/Lab2/Add_vector_join.png "Add Vector Join")
 
 14. Click OK.
 15. You will see the join show up in the Join window (shown in figure below). The join has now been created.
 
-![Join Established](figures/Join_established.png "Join Established")
+![Join Established](figures/Lab2/Join_established.png "Join Established")
 
 16. Click OK on the Layer Properties window to close it.
 17. Re-open the countyp010 attribute table.  You will see all the additional fields appended to the right side.
@@ -91,7 +91,7 @@ This join exists only within this QGIS Desktop document. In other words, the dat
 19. Right-click on the county layer in the Layers panel and choose Save as… from the context menu. This will allow you to save a new copy of the countyp010 shapefile with the new attributes included.
 20. Name the new shapefile countyp010_census.shp in your lab directory and add it to the map canvas (options shown in figure below).
 
-![Save vector layer as...](figures/Save_vector_layer_as.png "Save vector layer as...")
+![Save vector layer as...](figures/Lab2/Save_vector_layer_as.png "Save vector layer as...")
 
 20. You can now remove the original county layer from the map by right-clicking on it in the Layers panel and choosing Remove from the context menu.
 21. Save the project as Lab 2.qgs in your lab directory.
@@ -105,7 +105,7 @@ Now that you have joined data to the counties layer, you will explore different 
 4. Select the NAD83/Conus Albers coordinate systems for the map and click OK.
 4. The data should now resemble the figure below.
 
-![Map in Albers Equal Area](figures/Map_in_Albers_Equal_Area.png "Map in Albers Equal Area")
+![Map in Albers Equal Area](figures/Lab2/Map_in_Albers_Equal_Area.png "Map in Albers Equal Area")
 
 5. Open the Layer Properties for the county_010_census layer and click on the Style tab.
 6. Instead of the default Single Symbol renderer, choose the Graduated renderer. This allows you to choose a numeric field and classify the data into categories.
@@ -113,11 +113,11 @@ Now that you have joined data to the counties layer, you will explore different 
 8. Click the Classify button to create five classes and assign a color to each class. 
 9. Keep all of the other options as their default value (shown in the figure below) and click OK.
 
-![Graduated Styling Settings](figures/Graduated_Styling_Settings.png "Graduated Styling Settings")
+![Graduated Styling Settings](figures/Lab2/Graduated_Styling_Settings.png "Graduated Styling Settings")
 
 The color ramp may differ but your map should resemble the figure below. QGIS has divided the data values into five groupings and applied a color ramp across the categories. This first classification does not tell much of a story.
 
-![Counties Classified by total population](figures/Counties_Classified_by_total_population.png "Counties Classified by total population")
+![Counties Classified by total population](figures/Lab2/Counties_Classified_by_total_population.png "Counties Classified by total population")
 
 9. Open up the Layer Properties | Style tab again. The default classification Mode used was Equal Interval. This default mode attempts to create classes with the equal data value intervals.
 10. Change the Mode to Natural Breaks (Jenks). Notice the data values change. This is an algorithm that calculates natural groupings of a series of data values. 
@@ -125,7 +125,7 @@ The color ramp may differ but your map should resemble the figure below. QGIS ha
 
 This is a more informative portrayal of the data. There large population centers are more visible now (shown in the figure below).
 
-![Total Population via the Natural Breaks Mode](figures/Total_Population_via_the_Natural_Breaks_Mode.png "Total Population via the Natural Breaks Mode")
+![Total Population via the Natural Breaks Mode](figures/Lab2/Total_Population_via_the_Natural_Breaks_Mode.png "Total Population via the Natural Breaks Mode")
 
 11. Open up the Layer Properties | Style tab again.
 12. Change the Mode to Quantile (Equal Count). Notice the data values change. This is an algorithm that attempts to put the same number of features into each class. 
@@ -133,14 +133,14 @@ This is a more informative portrayal of the data. There large population centers
 
 This is a much more informative depiction of total population (shown in the figure below).
 
-![Total Population via the Quantile Mode](figures/Total_Population_via_the_Quantile_Mode.png "Total Population via the Quantile Mode")
+![Total Population via the Quantile Mode](figures/Lab2/Total_Population_via_the_Quantile_Mode.png "Total Population via the Quantile Mode")
 
 13. Open up the Layer Properties | Style tab again.
 14. In addition to changing the mode, you can change the number of classes. Change the number of classes to 4 and click Apply to see the difference on the map.
-14. You can also change the Color ramp. Click the drop down arrow to the right of Color ramp and choose RdBu ![Color ramp](figures/Color_ramp.png "Color ramp").
+14. You can also change the Color ramp. Click the drop down arrow to the right of Color ramp and choose RdBu ![Color ramp](figures/Lab2/Color_ramp.png "Color ramp").
 15. Click Apply. This highlights rural counties with a red color (shown in the figure below).
 
-![Total Population via the Quantile Mode 4 Classes and a Red Blue Color Ramp](figures/Total_Population_via_the_Quantile_Mode_4_Classes_and_a_Red-Blue_Color_Ramp.png "Total Population via the Quantile Mode 4 Classes and a Red-Blue Color Ramp")
+![Total Population via the Quantile Mode 4 Classes and a Red Blue Color Ramp](figures/Lab2/Total_Population_via_the_Quantile_Mode_4_Classes_and_a_Red-Blue_Color_Ramp.png "Total Population via the Quantile Mode 4 Classes and a Red-Blue Color Ramp")
 
 *Tip*: You can also click the Invert option to have the color ramp reversed.
 
@@ -148,7 +148,7 @@ This is a much more informative depiction of total population (shown in the figu
 
 *Final Note*: You can change the Legend for each class. Instead of the bottom class having values of 67-11566.75, you can double click on the label text for a class and change it. For example, you could change the least populated class label to ‘Rural’. This is shown in the figure below.
 
-![Changing Class Legend](figures/Changing_Class_Legend.png "Changing Class Legend")
+![Changing Class Legend](figures/Lab2/Changing_Class_Legend.png "Changing Class Legend")
 
 ## 3 Conclusion
 In this lab, you learned to join tabular data with a spatial component to a shapefile. Once that was complete, you were able to classify the data and produce different renderings of that data. Between the various classification modes, choosing the number of classes and the color ramp you have endless possibilities for displaying numeric data. The key is to remember what data pattern you are trying to share with the map reader. Then you must find a classification theme that will tell the story. These are common techniques for dealing with numeric data on maps. 

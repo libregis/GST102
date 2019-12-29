@@ -64,7 +64,7 @@ Examine the vector lab exercise data using QGIS Browser.
 4. You should see 7 shapefiles, an ERDAS Imagine file, a GeoTiff file, and several XML metadata files.
 4. To study the properties of each file select each one and choose the Metadata tab (see figure below). 
 
-![QGIS Browser Metadata Tab](figures/QGIS_Browser_Metadata_Tab.png "QGIS Browser Metadata Tab")
+![QGIS Browser Metadata Tab](figures/Lab1/QGIS_Browser_Metadata_Tab.png "QGIS Browser Metadata Tab")
 
 **Question # 1: Studying the properties of each of the shapefiles listed below, write down the geometry type (point, line, polygon) and the number of features in the space provided below.**
 
@@ -114,48 +114,48 @@ Examine the raster datasets provided with this lab.
 This task will introduce you to another file format, the geodatabase. You will use QGIS Desktop to connect to, and explore the data contained in a SpatiaLite database. SpatiaLite is a SQLite database engine with spatial functions added. This means that spatial data layers can be stored in the relational database.
 
 1. Open QGIS Desktop.
-2. Click the Add SpatiaLite Layer button ![SpatiaLite Layer button](figures/SpatiaLite_Layer_button.png "SpatiaLite Layer button")  opening the Add SpatiaLite Table(s) window.
+2. Click the Add SpatiaLite Layer button ![SpatiaLite Layer button](figures/Lab1/SpatiaLite_Layer_button.png "SpatiaLite Layer button")  opening the Add SpatiaLite Table(s) window.
 3. Click the New button to establish a connection to a SpatiaLite database.
 4. Select the Lab 1 Data\\geodatabase\\NDG.sqlite file and click Open.
 5. Click Connect in the Add SpatiaLite Table(s) window to connect to the geodatabase and see the contents (see figure below).
 
-![Add SpatiaLite Tables](figures/Add_SpatiaLite_Tables.png "Add SpatiaLite Tables")
+![Add SpatiaLite Tables](figures/Lab1/Add_SpatiaLite_Tables.png "Add SpatiaLite Tables")
 
 6. You will see two layers: nhdflowline and nhdwaterbody. Select both by clicking on them with the Ctrl key held down.
 7. Click Add to add them to the map canvas in QGIS Desktop (see figure below).
 
-![SpatiaLite Layers in QGIS Desktop](figures/SpatiaLite_Layers_in_QGIS_Desktop.png "SpatiaLite Layers in QGIS Desktop")
+![SpatiaLite Layers in QGIS Desktop](figures/Lab1/SpatiaLite_Layers_in_QGIS_Desktop.png "SpatiaLite Layers in QGIS Desktop")
 
 8. Now you will import a shapefile into the NDB SpatiaLite geodatabase. From the menu bar choose Database | DB Manager | DB Manager to open the DB Manager window.
 9. Expand the SpatiaLite section and the NGD.sqlite geodatabase. You will see the two layers and many other tables (see figure below). These other tables store information about the geometry and coordinate reference systems of GIS data. 
 
-![DB Manager](figures/DB_Manager.png "DB Manager")
+![DB Manager](figures/Lab1/DB_Manager.png "DB Manager")
 
-9. Click the Import Layer/File ![Import Layer File button](figures/Import_Layer_File_button.png "Import Layer File button")  button to open the Import vector layer window.
-10. Click the ellipsis ![ellipsis button](figures/ellipsis_button.png "ellipsis button")  button to the right of the Input section to open the Choose the file to import window. 
+9. Click the Import Layer/File ![Import Layer File button](figures/Lab1/Import_Layer_File_button.png "Import Layer File button")  button to open the Import vector layer window.
+10. Click the ellipsis ![ellipsis button](figures/Lab1/ellipsis_button.png "ellipsis button")  button to the right of the Input section to open the Choose the file to import window. 
 11. Navigate to Lab 1 Data\\geodatabase folder and select NHDPOINT.shp. Click Open.
 11.	Name the Output table ‘nhdpoint’.
 12.	Under Options check Source SRID and type in 4269. This is the EPSG code for the geographic coordinate system NAD83. 
 13. Check your options again the figure below. If they match, click OK to import the shapefile into the database.
 
-![Import Vector Layer](figures/Import_Vector_Layer.png "Import Vector Layer")
+![Import Vector Layer](figures/Lab1/Import_Vector_Layer.png "Import Vector Layer")
 
 12. You should get a message that the Import was successful. Click OK.
-13. Click the Refresh ![Refresh button](figures/Refresh_button.png "Refresh button") button on the DB Manager. You should now see nhdpoint listed as a new table in the database with a point icon (shown in figure below). 
+13. Click the Refresh ![Refresh button](figures/Lab1/Refresh_button.png "Refresh button") button on the DB Manager. You should now see nhdpoint listed as a new table in the database with a point icon (shown in figure below). 
 
-![DB Manager With New Layer Imported](figures/DB_Manager_with_new_layer_imported.png "DB Manager With New Layer Imported")
+![DB Manager With New Layer Imported](figures/Lab1/DB_Manager_with_new_layer_imported.png "DB Manager With New Layer Imported")
 
 14. Right-click on the nhdpoint layer in the DB Manager and choose Add to canvas. Close the DB Manager.
 
-![Add To Canvas](figures/Add_to_canvas.png "Add To Canvas")
+![Add To Canvas](figures/Lab1/Add_to_canvas.png "Add To Canvas")
 
 15. You should now see the new point data added to QGIS (shown in figure below). You have successfully connected to a geodatabase and imported a shapefile into the database.
 
-![QGIS Desktop With New SpatiaLite Layer Added to Map](figures/QGIS_Desktop_with_new_SpatiaLite_layer_added_to_map.png "QGIS Desktop With New SpatiaLite Layer Added to Map")
+![QGIS Desktop With New SpatiaLite Layer Added to Map](figures/Lab1/QGIS_Desktop_with_new_SpatiaLite_layer_added_to_map.png "QGIS Desktop With New SpatiaLite Layer Added to Map")
 
 16. Open QGIS Browser. Expand the SpatiaLite database connection. Notice that you are now connected to the NGD.sqlite database (see figure below) and you can see the imported shapefile in the database.
 
-![QGIS Browser Showing Connection to SpatiaLite Database](figures/QGIS_Browser_showing_connection_to_SpatiaLite_database.png "QGIS Browser Showing Connection to SpatiaLite Database")
+![QGIS Browser Showing Connection to SpatiaLite Database](figures/Lab1/QGIS_Browser_showing_connection_to_SpatiaLite_database.png "QGIS Browser Showing Connection to SpatiaLite Database")
 
 **Question # 4:**
 What is a reason to import source data into a geodatabase?
@@ -187,7 +187,7 @@ Let us say for purposes of our analysis that we would like to change the coordin
 7. Right-click on the layer in the Layers panel and choose Save as…. This will open the Save vector layer as window.
 8. Referencing the figure below, reproject this layer to UTM Zone 14, NAD83 and have it added to the map canvas.
 
-![Save vector layer as...](figures/Save_vector_layer_as.png "Save vector layer as...")
+![Save vector layer as...](figures/Lab1/Save_vector_layer_as.png "Save vector layer as...")
 
 ## Task 5 - GIS Data Attributes and Attribute Tables##
 

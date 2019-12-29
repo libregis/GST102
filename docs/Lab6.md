@@ -40,7 +40,7 @@ In this task, you will use the Road Graph plugin to determine the shortest dista
 3. Add the MTA_DPT_SpeedLimits shapefile to QGIS Desktop.
 4. Right-click on the layer and choose Set Project CRS from layer from the context menu.
 
-![Street Layer in QGIS Desktop](figures/Street_Layer_in_QGIS_Desktop.png "Street Layer in QGIS Desktop")
+![Street Layer in QGIS Desktop](figures/Lab6/Street_Layer_in_QGIS_Desktop.png "Street Layer in QGIS Desktop")
 
 5. This is a street network for the City of San Francisco. Open the attribute table to see what kind of data you have to work with. Notice that in addition having the street name and type, there is a column populated with speed limits for each road segment. Close the attribute table.
 6. Open the Layer Properties | Style tab and symbolize the data by speed limit. 
@@ -55,11 +55,11 @@ In this task, you will use the Road Graph plugin to determine the shortest dista
 
 	e. Click OK (see figure below)
 
-![Styling the Street Layer by Speed Limit](figures/Styling_the_Street_Layer_by_Speed_Limit.png "Styling the Street Layer by Speed Limit")
+![Styling the Street Layer by Speed Limit](figures/Lab6/Styling_the_Street_Layer_by_Speed_Limit.png "Styling the Street Layer by Speed Limit")
 
 Your map should resemble the figure below.You can now distinguish the major arteries.
 
-![San Francisco Streets Styled by Speed Limit](figures/San_Francisco_Streets_Styled_by_Speed_Limit.png "San Francisco Streets Styled by Speed Limit")
+![San Francisco Streets Styled by Speed Limit](figures/Lab6/San_Francisco_Streets_Styled_by_Speed_Limit.png "San Francisco Streets Styled by Speed Limit")
 
 8. Save your map as Lab 6.qgs.
 9. You will use the QGIS Road Graph plugin to find the shortest distance between two points on the network. From the menu bar choose Plugins | Manage and Install Plugins.
@@ -82,19 +82,19 @@ Your map should resemble the figure below.You can now distinguish the major arte
 
 	g. Click OK to set the settings
 
-![Road Graph Settings](figures/Road_Graph_Settings.png "Road Graph Settings")
+![Road Graph Settings](figures/Lab6/Road_Graph_Settings.png "Road Graph Settings")
 
-12. Now you will populate the Shortest path panel (below the Layers panel). Click the Start location ![Start location button](figures/Start_location_button.png "Start location button")  button and click on a spot anywhere on the map. Do the same for the Stop location via the Stop location button. Small dots will appear where you have clicked.
+12. Now you will populate the Shortest path panel (below the Layers panel). Click the Start location ![Start location button](figures/Lab6/Start_location_button.png "Start location button")  button and click on a spot anywhere on the map. Do the same for the Stop location via the Stop location button. Small dots will appear where you have clicked.
 13. Set the Criterion as Length.
 14. Click Calculate to find the shortest path between the two points. After some processing, a red line will appear as the solution (example shown in figure below).
 
-![Shortest Path Between Two Points on Linear Network](figures/Shortest_Path_Between_Two_Points_on_Linear_Network.png "Shortest Path Between Two Points on Linear Network")
+![Shortest Path Between Two Points on Linear Network](figures/Lab6/Shortest_Path_Between_Two_Points_on_Linear_Network.png "Shortest Path Between Two Points on Linear Network")
 
 14. To save the shortest path click the Export button.
 15. Choose New temporary layer as the Select destination layer. Click OK. The shortest path will now appear in your Layers panel and on the map canvas. 
 15. To make this layer permanent right-click on it and choose Save As…  Save the data to a shapefile in the Lab 6 Data folder named ShortestPath.shp (see figure below),
 
-![Saving the Temporary Shortest Path Layer to a Shapefile](figures/Saving_the_Temporary_Shortest_Path_Layer_to_a_Shapefile.png "Saving the Temporary Shortest Path Layer to a Shapefile")
+![Saving the Temporary Shortest Path Layer to a Shapefile](figures/Lab6/Saving_the_Temporary_Shortest_Path_Layer_to_a_Shapefile.png "Saving the Temporary Shortest Path Layer to a Shapefile")
 
 16. Remove the temporary shortest path layer from the Layers panel.
 16. Now you will determine the shortest drive time between the two points. In the Shortest path panel, change the Criterion to Time.
@@ -104,7 +104,7 @@ Your map should resemble the figure below.You can now distinguish the major arte
 18. Click Clear on the Shortest path button to remove the temporary red line showing the fastest route.
 19. Style the ShortestPath layer as a red line with a thickness of 0.46 and the FastestRoute layer with a dark blue line of equal thickness. With the points I chose, I had two very different solutions (figure below).
 
-![Final Solutions](figures/Final_Solutions.png "Final Solutions")
+![Final Solutions](figures/Lab6/Final_Solutions.png "Final Solutions")
 
 19. Save your map file and close QGIS Desktop.
 
@@ -125,7 +125,7 @@ The GRASS plugin is a core QGIS plugin. This means it is already installed and a
 
 Enabling the GRASS plugin turns on a new toolbar (shown in figure below). If the toolbar does not appear, click View | Toolbars | GRASS.
 
-![New Toolbar](figures/new_toolbar.png "New Toolbar")
+![New Toolbar](figures/Lab6/new_toolbar.png "New Toolbar")
 
 The data is already set up for you in this QGIS Desktop project. The following is simply an explanation to get you oriented to the GRASS data structure and show you how the GRASS data was loaded in to QGIS Desktop. Remember GRASS data is stored in a GRASS database, which again is simply a folder. Inside the database will be folder(s) called Locations and inside a Location will be folder(s) called Mapsets.
 
@@ -137,7 +137,7 @@ To begin working with the GRASS tools you need to have a GRASS Mapset open.
 
 This QGIS project has three data layers from a GRASS Database, however, you need to open a Mapset to begin working with GRASS tools. Additionally, the Mapset you have open determines where your outputs will be saved. For this lab there is an empty Mapset called MyData that you will open to complete Task 2.
 
-5. From the GRASS toolbar, click on the Open Mapset ![Open Mapset button](figures/Open_Mapset_button.png "Open Mapset button")  button. Fill out the Select GRASS Mapset window as in the figure below.
+5. From the GRASS toolbar, click on the Open Mapset ![Open Mapset button](figures/Lab6/Open_Mapset_button.png "Open Mapset button")  button. Fill out the Select GRASS Mapset window as in the figure below.
 
 	a. The Gisdbase should be: Lab 6 Data/Data/GRASSdb
 
@@ -145,16 +145,16 @@ This QGIS project has three data layers from a GRASS Database, however, you need
 
 	c. Mapset: MyData
 
-![Select GRASS Mapset](figures/Select_GRASS_Mapset.png "Select GRASS Mapset")
+![Select GRASS Mapset](figures/Lab6/Select_GRASS_Mapset.png "Select GRASS Mapset")
 
 6. There will be two changes that occur. 1) You will see a red box appear around your data on the map. This represents the Region of study (shown in figure below), which in this case is equal to the Location settings. It is the spatial extent of your study area. 2) The remainder of the buttons on the GRASS toolbar are now active.
 
-![GRASS Mapset Open](figures/GRASS_Mapset_Open.png "GRASS Mapset Open")
+![GRASS Mapset Open](figures/Lab6/GRASS_Mapset_Open.png "GRASS Mapset Open")
 
-7. Click the Open GRASS Tools ![Open Grass Tools button](figures/Open_Grass_Tools_button.png "Open Grass Tools button")  button.
+7. Click the Open GRASS Tools ![Open Grass Tools button](figures/Lab6/Open_Grass_Tools_button.png "Open Grass Tools button")  button.
 8. The GRASS Tools window opens. This is the interface to all the GRASS geoprocessing tools. Notice that in the title bar of the window it displays your Location/Mapset (Lab6_SanFrancisco/MyData) (shown in figure below)
 
-![GRASS Tools](figures/GRASS_Tools.png "GRASS Tools")
+![GRASS Tools](figures/Lab6/GRASS_Tools.png "GRASS Tools")
 
 The GRASS Tools window has three tabs: Modules Tree, Modules List, and Browser. The Modules Tree allows you to access GRASS tools organized by theme. The Modules List has all the same tools, but they are listed alphabetically with a search bar. The Browser allows you to see what layers you have in your open Mapset. You do not yet have data in your MyData Mapset so there will be nothing yet to see.
 
@@ -181,11 +181,11 @@ This tool will create a linear network of San Francisco streets and attach nodes
 
 	h. Click Run
 
-![v.net Tool](figures/v_net_Tool.png "v.net Tool")
+![v.net Tool](figures/Lab6/v_net_Tool.png "v.net Tool")
 
 While running the Output tab will be visible (shown in figure below).
 
-![v.net Tool Successfully Finished](figures/v_net_Tool_Successfully_Finished.png "v.net Tool Successfully Finished")
+![v.net Tool Successfully Finished](figures/Lab6/v_net_Tool_Successfully_Finished.png "v.net Tool Successfully Finished")
 
 11. Click the View output button to add the network dataset to QGIS.
 12. For now, leave the GRASS tools window open. You may want to move it to the side so you can see the map.
@@ -193,11 +193,11 @@ While running the Output tab will be visible (shown in figure below).
 
 In addition to the linear network, this operation produced nodes for each police station point. The View output only added the linear network to QGIS, so you will now add the network nodes to QGIS.
 
-14. On the GRASS toolbar click the Add GRASS Vector Layer ![GRASS Vector Layer button](figures/GRASS_Vector_Layer_button.png "GRASS Vector Layer  button")  button.
+14. On the GRASS toolbar click the Add GRASS Vector Layer ![GRASS Vector Layer button](figures/Lab6/GRASS_Vector_Layer_button.png "GRASS Vector Layer  button")  button.
 15. The Select GRASS Vector Layer window opens. Under Mapset: MyData, Map name SF_Network choose 2_point (figure below). (Remember when you ran the v.net tool you specified that the ID for the Arc layer was 1 and the node layer 2.)
 16. Click OK to add the 2_point layer to the map.
 
-![Select GRASS Vector Layer](figures/Select_GRASS_Vector_Layer.png "Select GRASS Vector Layer")
+![Select GRASS Vector Layer](figures/Lab6/Select_GRASS_Vector_Layer.png "Select GRASS Vector Layer")
 
 16. Open the attribute table for the SF_Network_2 node layer. It has one column named cat with values for each of the 14 police stations (1-14). Close the table.
 
@@ -215,20 +215,20 @@ Now that the network dataset is constructed, you will identify the road territor
 
 	d. Name for output vector map: PoliceSt_Allocation
 
-![v.net.alloc Tool](figures/v_net_alloc_Tool.png "v.net.alloc Tool")
+![v.net.alloc Tool](figures/Lab6/v_net_alloc_Tool.png "v.net.alloc Tool")
 
 19. When the tool is set up correctly, click Run. When complete click View output.
 20. Turn off the visibility of the SF_Network and SF_Streets layers.
 20. Open the attribute table for the PoliceSt_Allocation layer. Notice that it simply has the cat ID of each of the 14 police stations. 
 21. Before you close the GRASS Tools window switch to the Browser tab.
-22. Click the Refresh ![Refresh button](figures/Refresh_button.png "Refresh button")  button.
+22. Click the Refresh ![Refresh button](figures/Lab6/Refresh_button.png "Refresh button")  button.
 23. Expand MyData | Vector and PERMANENT | Vector. You will see the data layers listed in each Mapset (see figure below). 
 
-![GRASS Tools Browser](figures/GRASS_Tools_Browser.png "GRASS Tools Browser")
+![GRASS Tools Browser](figures/Lab6/GRASS_Tools_Browser.png "GRASS Tools Browser")
 
 22. Now click on the SF_Network layer and you will see some metadata in the right hand window (shown in figure below). This is the command line equivalent of the tool parameters you used. This can be helpful when trying to remember how you created a given layer. 
 
-![GRASS Tools Browser Displaying Metadata](figures/GRASS_Tools_Browser_Displaying_Metadata.png "GRASS Tools Browser Displaying Metadata")
+![GRASS Tools Browser Displaying Metadata](figures/Lab6/GRASS_Tools_Browser_Displaying_Metadata.png "GRASS Tools Browser Displaying Metadata")
 
 23. Close the GRASS Tools window.
 24. To see the results of your analysis you will Style the PoliceSt_Allocation layer. Open the Layer Properties | Style tab. Choose the following parameters:
@@ -259,7 +259,7 @@ Now that the network dataset is constructed, you will identify the road territor
 
 27. Your map should resemble the figure below.
 
-![Road Allocation by Police Station](figures/Road_Allocation_by_Police_Station.png "Road Allocation by Police Station")
+![Road Allocation by Police Station](figures/Lab6/Road_Allocation_by_Police_Station.png "Road Allocation by Police Station")
 
 ## 3 Conclusion
 
