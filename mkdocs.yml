@@ -1,0 +1,13 @@
+# Project information
+site_name: 'GST 102: Spatial Analysis'
+site_description: 'GST 102: Spatial Analysis'
+
+theme:
+  name: 'readthedocs'
+
+ # palette:
+ #   primary: 'light green'
+ #   accent: 'green'
+
+#markdown_extensions:
+#  - admonition
